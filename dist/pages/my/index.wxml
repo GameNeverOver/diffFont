@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.my_page}}">
+        <mm-navigation compid="{{$compid__15}}"></mm-navigation>
+    </view>
+</block>

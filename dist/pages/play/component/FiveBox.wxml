@@ -1,0 +1,4 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.fiveBox}}"><text wx:key="idx" wx:for="{{list}}" wx:for-item="v" wx:for-index="idx">-5</text>
+    </view>
+</block>

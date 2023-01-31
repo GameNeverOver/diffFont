@@ -1,0 +1,79 @@
+.ellipsis{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.ellipsisMore(@num){
+  display           : -webkit-box;
+  // 需要加上这一句autoprefixer的忽略规则 否则这一行样式加不上 导致无法展示省略号
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @num;
+  text-overflow     : ellipsis;
+  width             : 100%;
+  overflow          : hidden;
+}
+
+.flexOne{
+  flex: 1;
+}
+
+.flexAC{
+  display: flex;
+  align-items: center;
+}
+
+.flexAE{
+  display: flex;
+  align-items: flex-end;
+}
+
+.flexR{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flexJB{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexJBAC{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexJBAE{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.flexJCAC{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexDCAC{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexDCJCAC{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexWWJB{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+

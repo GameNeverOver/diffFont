@@ -1,0 +1,1 @@
+{"usingComponents":{"mm-navigation":"../../modules/@wmeimob/taro-design/src/components/navigation/index","five-box":"./component/FiveBox","pass-prompt":"./component/PassPrompt","error-box":"./component/ErrorBox"},"navigationBarTitleText":"火眼精金","navigationStyle":"custom"}

@@ -1,0 +1,339 @@
+@import '@wmeimob/taro-design/src/components/styles/themes/default.less';
+@import '../../static/styles/index.less';
+.homePage {
+  overflow-y: auto;
+  height: 100vh;
+  background-color: rgb(29, 118, 169);
+  padding: 0 20px;
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .barItem {
+      flex: 1;
+    }
+    image {
+      .wh(35px);
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+        position: relative;
+        .wh(30px);
+      }
+    }
+    .level {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      text {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid rgb(230, 226, 226);
+        box-shadow: 1px 1px 1px rgb(230, 226, 226);
+        margin-right: 4px;
+        margin-bottom: 1px;
+      }
+      .act {
+        transition: all 1.5s;
+        background-color: rgb(198, 5, 223);
+      }
+    }
+
+    .progressInfo {
+      text-align: center;
+      font-size: 16px;
+      color: #111;
+      position: relative;
+    }
+  }
+  @keyframes opacityFlash1 {
+    0% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  @keyframes opacityFlash2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes opacityFlash3 {
+    0% {
+      opacity: 0.5;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .diffImage {
+    width: 100%;
+    View.imgBox {
+      position: relative;
+      margin-top: 20px;
+      // height: 33vh;
+      width: 100%;
+      .door {
+        overflow-x: hidden;
+        position: absolute;
+        top: 0;
+        // width: 100%;
+        height: 100%;
+        z-index: 11;
+        left: 0;
+        background-color: rgb(234, 150, 15);
+        border: 3px solid #000;
+        .doorBar {
+          .flex_c();
+          width: 20px;
+          height: 80px;
+          position: absolute;
+          right: 30px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background-color: rgb(190, 202, 14);
+          View {
+            border-top: 5px solid #ff0;
+            border-bottom: 5px solid #ff0;
+            padding: 0 3px;
+            width: 50%;
+            height: 60%;
+            background: #000;
+          }
+        }
+      }
+      image {
+        border-radius: 10px;
+        display: block;
+        width: 100%;
+        // height: 100%;
+        // border: 1px solid rgb(114, 84, 84);
+      }
+      text {
+        z-index: 10;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        transition: all 1s;
+        background-image: url(./img/right.png);
+        background-size: 100% 100%;
+      }
+      .star {
+        position: absolute;
+        z-index: 1;
+        view {
+          position: absolute;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+        .oneTip {
+          top: 20px;
+          left: 10px;
+          animation-name: opacityFlash1;
+        }
+        .twoTip {
+          animation-name: opacityFlash2;
+        }
+        .threeTip {
+          left: 20px;
+          animation-name: opacityFlash3;
+        }
+      }
+    }
+  }
+
+  .tipContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(154, 97, 97);
+    .title {
+      font-size: 20px;
+      color: #eee;
+      text:last-child {
+        color: #fff;
+      }
+    }
+    .tip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid #ff0;
+      padding: 3px 8px;
+      background-color: rgb(181, 250, 111);
+      image {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@keyframes moveFive {
+  0% {
+    right: 0px;
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    right: -40px;
+    top: -50px;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes moveNone {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+    display: none;
+  }
+}
+
+.fiveBox {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  text {
+    right: 0px;
+    position: absolute;
+    font-size: 12px;
+    color: #f0f;
+    animation-name: moveFive;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.errorBox {
+  image {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    animation-name: moveNone;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.setting {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  .basePopover {
+    font-size: 16px;
+    position: absolute;
+    width: 80vw;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 2px solid rgb(249, 128, 21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .setPopover {
+    color: #fff;
+    height: 200px;
+    background-color: rgb(219, 231, 45);
+    view {
+      margin-bottom: 20px;
+      text {
+        margin-right: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .passPopover {
+    color: #fff;
+    height: 180px;
+    background-color: rgb(22, 139, 118);
+    image {
+      position: absolute;
+      z-index: 0;
+    }
+    view {
+      z-index: 1;
+      margin-bottom: 20px;
+      &:first-child {
+        font-size: 22px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+        text {
+          padding: 5px 8px;
+          background-color: rgb(19, 68, 52);
+          border-radius: 5px;
+          &:first-child {
+            margin-right: 10px;
+          }
+          &:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .pausePopover {
+    color: rgb(244, 219, 219);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;
+    width: 100vw;
+    View {
+      &:first-child {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-weight: 800;
+      }
+      &:last-child {
+        font-size: 14px;
+      }
+    }
+  }
+}

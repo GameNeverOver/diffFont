@@ -1,0 +1,113 @@
+@import '../../modules/@wmeimob/taro-design/src/components/styles/themes/default.less';
+
+:export {
+  tabBarFontColor: @tabBarFontColor;
+  primaryColor: @primaryColor;
+  iconSize: @tabBarIconSize;
+}
+
+.MMTabBar_placeholder {
+  height: 50px;
+  // 不显示
+  height: 0;
+  overflow: hidden;
+}
+
+.MMTabBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: @boxShadow;
+  height: 0;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item {
+  flex: 1;
+  margin-top: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: @tabBarFontColor;
+}
+
+.image {
+  width: @tabBarIconSize + 0px;
+  height: @tabBarIconSize + 0px;
+}
+
+.redDot {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: @red;
+}
+
+.count {
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+
+.iconfont {
+  height: 22px;
+  line-height: 22px;
+  position: relative;
+}
+
+.text {
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 16px;
+  height: 16px;
+}
+
+.home {
+  background: url(./images/home.png) no-repeat center;
+  background-size: 100%;
+}
+.home_select {
+  background: url(./images/home_select.png) no-repeat center;
+  background-size: 100%;
+}
+
+.family {
+  background: url(./images/family.png) no-repeat center;
+  background-size: 100%;
+}
+.family_select {
+  background: url(./images/family_select.png) no-repeat center;
+  background-size: 100%;
+}
+
+.store {
+  background: url(./images/store.png) no-repeat center;
+  background-size: 100%;
+}
+.store_select {
+  background: url(./images/store_select.png) no-repeat center;
+  background-size: 100%;
+}
+
+.mine {
+  background: url(./images/mine.png) no-repeat center;
+  background-size: 100%;
+}
+.mine_select {
+  background: url(./images/mine_select.png) no-repeat center;
+  background-size: 100%;
+}

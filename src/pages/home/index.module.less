@@ -1,0 +1,141 @@
+@import '../../static/styles/index.less';
+.indexPage {
+  height: 100vh;
+  padding-top: 20vh;
+  text-align: center;
+  background: #5cdfc2;
+  background: linear-gradient(90deg, #017d63 0%, #24af81 100%);
+  .bgImg {
+    position: fixed;
+    height: 00vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  @keyframes fontMove {
+    0% {
+      transform: rotate(360deg);
+      left: 100px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes fontMove2 {
+    0% {
+      left: 200px;
+    }
+    50% {
+      left: 100px;
+      top: 20px;
+      transform: scale(1.5);
+    }
+    75% {
+      left: 50px;
+      top: -20px;
+      transform: scale(0.5);
+    }
+
+    100% {
+      left: 0;
+      top: 0;
+      transform: scale(1);
+    }
+  }
+  .title {
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    view {
+      position: relative;
+      animation-name: fontMove;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      &:last-child {
+        animation-name: fontMove2;
+        animation-duration: 4s;
+      }
+    }
+    image {
+      .wh(70px, 50px);
+      position: absolute;
+      left: 24px;
+      top: 12px;
+    }
+  }
+  .options {
+    font-size: 18px;
+    color: #333;
+    image {
+      .wh(20px);
+      margin-right: 3px;
+    }
+    view {
+      .flex_c();
+      padding: 8px;
+    }
+  }
+  .start {
+    margin-top: 10vh;
+    view {
+      .flex_c();
+      width: 50vw;
+      font-size: 28px;
+      border: 4px solid rgb(30, 36, 35);
+      border-radius: 15px;
+      margin: 20px auto 5px;
+      image {
+        .wh(26px);
+        margin-left: 10px;
+      }
+    }
+    text {
+      font-size: 12px;
+    }
+  }
+}
+
+.setting {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  .basePopover {
+    font-size: 16px;
+    position: absolute;
+    width: 80vw;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 2px solid rgb(150, 150, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .setPopover {
+    color: rgb(244, 235, 235);
+    height: 200px;
+    background-color: rgb(29, 146, 178);
+    view {
+      margin-bottom: 20px;
+      text {
+        margin-right: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.MMNavigation}}" style="{{anonymousState__temp3}}">
+        <view class="{{className}}" style="{{anonymousState__temp4}}">
+            <view class="{{styles.content}}" style="{{anonymousState__temp5}}">
+                <view class="{{styles.leftBox}}">{{renderLeftContent}}</view>
+                <block wx:if="{{backVisible}}">
+                    <template is="renderGoBack" data="{{...anonymousState__temp}}"></template>
+                </block>
+                <view style="{{anonymousState__temp6}}" class="{{styles.public}}">
+                    <block>
+                        <block wx:if="{{title}}">{{title}}</block>
+                        <block wx:else>
+                            <template is="renderImage" data="{{...anonymousState__temp2}}"></template>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+<template name="renderGoBack">
+    <block>
+        <block wx:if="{{length > 1}}">
+            <view class="{{styles.goback}}" bindtap="onGoBack">
+                <mm-icon-font compid="{{$compid__19}}"></mm-icon-font>
+            </view>
+        </block>
+    </block>
+</template>
+<template name="renderImage">
+    <block>
+        <view>
+            <block wx:if="{{logo === 'login'}}">
+                <image src="https://aixinjingji.oss-cn-shanghai.aliyuncs.com/aixin/20f7bc4b-3c42-e27e-4b11-7e82c3147457.png" style="{{anonymousState__temp7}}"></image>
+            </block>
+            <block wx:if="{{logo === 'home'}}">
+                <image src="{{anonymousState__temp8}}" style="{{anonymousState__temp9}}"></image>
+            </block>
+        </view>
+    </block>
+</template>

@@ -1,0 +1,52 @@
+.flex_c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex_s {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wh(@w: 100%, @h: @w) {
+  width: @w;
+  height: @h;
+}
+.ellipsis {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 关门
+@keyframes closeDoor {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+// 开门
+@keyframes openDoor {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+    z-index: -1;
+  }
+}
+
+.close {
+  animation-name: closeDoor;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.open {
+  animation-name: openDoor;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}

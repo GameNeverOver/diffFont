@@ -1,0 +1,27 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.indexPage}}">
+        <view class="{{styles.title}}">
+            <view wx:key="v" wx:for="{{gameName}}" wx:for-item="v" wx:for-index="_anonIdx2">{{v}}
+                <block wx:if="{{v === '眼'}}">
+                    <image src="{{imgGlasses}}"></image>
+                </block>
+            </view>
+        </view>
+        <view class="{{styles.options}}">
+            <view bindtap="anonymousFunc0">
+                <image src="{{imgSetting}}"></image>设置</view>
+            <view bindtap="anonymousFunc1">
+                <image src="{{imgChoose}}"></image>选关</view>
+            <view>
+                <image src="{{imgRank}}"></image>排名</view>
+        </view>
+        <view class="{{styles.start}}">
+            <view bindtap="anonymousFunc2">开始游戏
+                <image src="{{imgClick}}"></image>
+            </view><text>当前关卡：第{{maxLevel}}关</text>
+        </view>
+        <block wx:if="{{modeVisible}}">
+            <setting compid="{{$compid__14}}"></setting>
+        </block>
+    </view>
+</block>

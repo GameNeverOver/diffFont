@@ -1,0 +1,29 @@
+{
+  "name": "request",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.f.wmeimob.com/Frontend/request.git"
+  },
+  "installationPath": [
+    "src"
+  ],
+  "installationPathGitignore": [
+    "src/modules"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tarojs/taro": "^2.2.9",
+    "@wmeimob/node-tools": "ssh://git@git.f.wmeimob.com:9922/Frontend/node-tools.git#v1.1.2",
+    "antd": "^4.3.5",
+    "core-decorators": "^0.20.0",
+    "eslint": "6.5.1",
+    "eslint-config-wmeimob": "ssh://git@git.f.wmeimob.com:9922/Frontend/eslint-config-wmeimob.git"
+  }
+}

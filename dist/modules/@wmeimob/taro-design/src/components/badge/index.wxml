@@ -1,0 +1,6 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{absolute ? styles.MMBadgeAbsolute : ''}}">
+        <view class="{{className}}" style="{{anonymousState__temp}}"><text>{{value === undefined ? 0 : value}}</text>
+        </view>
+    </view>
+</block>
