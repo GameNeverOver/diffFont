@@ -75,7 +75,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "loopArray17", "$compid__18", "styles", "diffsData", "maxLevel", "imgLock", "isNewIphone"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "loopArray13", "$compid__16", "styles", "diffsData", "maxLevel", "imgLock", "isNewIphone"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -96,10 +96,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__18"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__16"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__18 = _genCompid2[0],
-          $compid__18 = _genCompid2[1];
+          $prevCompid__16 = _genCompid2[0],
+          $compid__16 = _genCompid2[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           diffsData = _useContext.diffsData,
@@ -107,12 +107,12 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           setNowLevel = _useContext.setNowLevel;
 
       var anonymousState__temp = '\u5171\u8BA1' + diffsData.length + '\u5173';
-      var loopArray17 = [].concat(_toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData)).map(function (item, idx) {
+      var loopArray13 = [].concat(_toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData), _toConsumableArray(diffsData)).map(function (item, idx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey = "bfzzz" + idx;
+        var _$indexKey = "bbzzz" + idx;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           setNowLevel(idx + 1);
@@ -127,11 +127,11 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": anonymousState__temp
-      }, $compid__18, $prevCompid__18);
+      }, $compid__16, $prevCompid__16);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray17: loopArray17,
-        $compid__18: $compid__18,
+        loopArray13: loopArray13,
+        $compid__16: $compid__16,
         styles: styles,
         diffsData: diffsData,
         maxLevel: maxLevel,
@@ -166,10 +166,10 @@ Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/
 
 /***/ }),
 
-/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/chooseLevel/index.tsx?taro&type=template&parse=PAGE&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/pages/chooseLevel/index.tsx?taro&type=template&parse=PAGE& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/chooseLevel/index.tsx?taro&type=template&parse=PAGE&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/pages/chooseLevel/index.tsx?taro&type=template&parse=PAGE& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -243,9 +243,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=PAGE& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/chooseLevel/index.tsx?taro&type=template&parse=PAGE&");
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=PAGE& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/chooseLevel/index.tsx?taro&type=template&parse=PAGE&");
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ })

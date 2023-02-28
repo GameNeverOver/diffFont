@@ -76,7 +76,7 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MMTabBar.__proto__ || Object.getPrototypeOf(MMTabBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray15", "styles", "isNewIphone", "data", "currPageIndex", "flag", "path"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMBadge"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MMTabBar.__proto__ || Object.getPrototypeOf(MMTabBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray17", "styles", "isNewIphone", "data", "currPageIndex", "flag", "path"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMBadge"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(MMTabBar, [{
@@ -110,12 +110,12 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
       var data = (0, _GlobalData.getGlobalData)(_GlobalData.EGlobalDataKey.Tabs);
       var activeColor = (0, _GlobalData.getGlobalData)(_GlobalData.EGlobalDataKey.ActiveColor) || _indexModules2.default.primaryColor;
       var defaultColor = (0, _GlobalData.getGlobalData)(_GlobalData.EGlobalDataKey.DefaultColor) || _indexModules2.default.tabBarFontColor;
-      var loopArray15 = data.map(function (value, index) {
+      var loopArray17 = data.map(function (value, index) {
         value = {
           $original: (0, _taroWeapp.internal_get_original)(value)
         };
 
-        var _$indexKey = "bczzz" + index;
+        var _$indexKey = "bdzzz" + index;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           return _this2.onClick(value.$original, index);
@@ -126,36 +126,36 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
           color: _globalStore2.default.tabKey === index ? activeColor : defaultColor
         });
 
-        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bdzzzzzzzz" + index, true),
+        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bezzzzzzzz" + index, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__16 = _genCompid2[0],
-            $compid__16 = _genCompid2[1];
+            $prevCompid__17 = _genCompid2[0],
+            $compid__17 = _genCompid2[1];
 
         value.$original.redHot && _taroWeapp.propsManager.set({
           "absolute": true
-        }, $compid__16, $prevCompid__16);
+        }, $compid__17, $prevCompid__17);
 
-        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "bezzzzzzzz" + index, true),
+        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "bfzzzzzzzz" + index, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__17 = _genCompid4[0],
-            $compid__17 = _genCompid4[1];
+            $prevCompid__18 = _genCompid4[0],
+            $compid__18 = _genCompid4[1];
 
         value.$original.count && _taroWeapp.propsManager.set({
           "value": value.$original.count,
           "digit": 2,
           "absolute": true
-        }, $compid__17, $prevCompid__17);
+        }, $compid__18, $prevCompid__18);
         return {
           _$indexKey: _$indexKey,
           $loopState__temp2: $loopState__temp2,
           $loopState__temp4: $loopState__temp4,
-          $compid__16: $compid__16,
           $compid__17: $compid__17,
+          $compid__18: $compid__18,
           $original: value.$original
         };
       });
       Object.assign(this.__state, {
-        loopArray15: loopArray15,
+        loopArray17: loopArray17,
         styles: _indexModules2.default,
         isNewIphone: _index2.isNewIphone,
         data: data
@@ -259,10 +259,10 @@ Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/
 
 /***/ }),
 
-/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/tab-bar/index.tsx?taro&type=template&parse=COMPONENT&":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/tab-bar/index.tsx?taro&type=template&parse=COMPONENT& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/tab-bar/index.tsx?taro&type=template&parse=COMPONENT&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/components/tab-bar/index.tsx?taro&type=template&parse=COMPONENT& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -313,9 +313,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=COMPONENT& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/tab-bar/index.tsx?taro&type=template&parse=COMPONENT&");
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=COMPONENT& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/tab-bar/index.tsx?taro&type=template&parse=COMPONENT&");
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_COMPONENT___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),

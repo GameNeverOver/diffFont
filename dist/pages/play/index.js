@@ -90,7 +90,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '火眼精金',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp4", "anonymousState__temp7", "loopArray115", "loopArray116", "$compid__146", "$compid__147", "$compid__148", "$compid__149", "styles", "imgShouye", "ing", "imgEnd", "imgStart", "findLength", "diffs", "imgInfo", "starVisible", "passVisible", "pause", "isNewIphone", "nowLevel", "fomatTime"], _this.anonymousFunc3Map = {}, _this.anonymousFunc5Map = {}, _this.customComponents = ["MMNavigation", "FiveBox", "PassPrompt", "ErrorBox"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp4", "anonymousState__temp7", "loopArray11", "loopArray12", "$compid__12", "$compid__13", "$compid__14", "$compid__15", "styles", "imgShouye", "ing", "imgEnd", "imgStart", "findLength", "diffs", "imgInfo", "starVisible", "passVisible", "pause", "isNewIphone", "nowLevel", "fomatTime"], _this.anonymousFunc3Map = {}, _this.anonymousFunc5Map = {}, _this.customComponents = ["MMNavigation", "FiveBox", "PassPrompt", "ErrorBox"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -111,25 +111,25 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__146"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__146 = _genCompid2[0],
-          $compid__146 = _genCompid2[1];
+          $prevCompid__12 = _genCompid2[0],
+          $compid__12 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__147"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__147 = _genCompid4[0],
-          $compid__147 = _genCompid4[1];
+          $prevCompid__13 = _genCompid4[0],
+          $compid__13 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__148"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__148 = _genCompid6[0],
-          $compid__148 = _genCompid6[1];
+          $prevCompid__14 = _genCompid6[0],
+          $compid__14 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__149"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__149 = _genCompid8[0],
-          $compid__149 = _genCompid8[1];
+          $prevCompid__15 = _genCompid8[0],
+          $compid__15 = _genCompid8[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           nowLevel = _useContext.nowLevel,
@@ -328,7 +328,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         setPause(false);
       };
 
-      var loopArray115 = diffs.map(function (item, __index3) {
+      var loopArray11 = diffs.map(function (item, __index3) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -338,7 +338,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           opacity: item.$original.find ? 0.9 : 0
         });
 
-        var _$indexKey = "ifzzz" + __index3;
+        var _$indexKey = "jzzzz" + __index3;
 
         _this2.anonymousFunc3Map[_$indexKey] = function (e) {
           e.stopPropagation();
@@ -362,7 +362,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       });
-      var loopArray116 = diffs.map(function (item, __index5) {
+      var loopArray12 = diffs.map(function (item, __index5) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -372,7 +372,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           opacity: item.$original.find ? 1 : 0
         });
 
-        var _$indexKey2 = "igzzz" + __index5;
+        var _$indexKey2 = "bazzz" + __index5;
 
         _this2.anonymousFunc5Map[_$indexKey2] = function (e) {
           e.stopPropagation();
@@ -399,27 +399,27 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": ""
-      }, $compid__146, $prevCompid__146);
+      }, $compid__12, $prevCompid__12);
       _taroWeapp.propsManager.set({
         "list": fiveList
-      }, $compid__147, $prevCompid__147);
+      }, $compid__13, $prevCompid__13);
       passVisible && _taroWeapp.propsManager.set({
         "fail": anonymousState__temp7,
         "tryAgain": tryAgain
-      }, $compid__148, $prevCompid__148);
+      }, $compid__14, $prevCompid__14);
       _taroWeapp.propsManager.set({
         "list": errorList
-      }, $compid__149, $prevCompid__149);
+      }, $compid__15, $prevCompid__15);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp4: anonymousState__temp4,
         anonymousState__temp7: anonymousState__temp7,
-        loopArray115: loopArray115,
-        loopArray116: loopArray116,
-        $compid__146: $compid__146,
-        $compid__147: $compid__147,
-        $compid__148: $compid__148,
-        $compid__149: $compid__149,
+        loopArray11: loopArray11,
+        loopArray12: loopArray12,
+        $compid__12: $compid__12,
+        $compid__13: $compid__13,
+        $compid__14: $compid__14,
+        $compid__15: $compid__15,
         styles: styles,
         imgShouye: _home2.default,
         ing: ing,
@@ -504,10 +504,10 @@ Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/
 
 /***/ }),
 
-/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/pages/play/index.tsx?taro&type=template&parse=PAGE& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/pages/play/index.tsx?taro&type=template&parse=PAGE& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -591,9 +591,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=PAGE& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/basketball/Desktop/项目-素材/外快/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&");
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_basketball_Desktop_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=PAGE& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&");
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ })

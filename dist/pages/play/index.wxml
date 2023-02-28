@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.homePage}}">
-        <mm-navigation compid="{{$compid__146}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__12}}"></mm-navigation>
         <view class="{{styles.topBar}}">
             <view class="{{styles.barItem}}">
                 <image bindtap="anonymousFunc0" src="{{imgShouye}}"></image>
@@ -10,7 +10,7 @@
                 <view>第 {{nowLevel}} 关</view>
                 <view><text>{{fomatTime}}</text>
                 </view>
-                <five-box compid="{{$compid__147}}"></five-box>
+                <five-box compid="{{$compid__13}}"></five-box>
             </view>
             <view class="{{styles.level + ' ' + styles.barItem}}"><text wx:key="id" class="{{findLength > idx ? styles.act : ''}}" wx:for="{{diffs}}" wx:for-item="item" wx:for-index="idx"></text>
             </view>
@@ -24,7 +24,7 @@
                         </view>
                     </view>
                 </block>
-                <image src="{{imgInfo.url}}" mode="widthFix"></image><text wx:key="id" style="{{item.$loopState__temp3}}" catchtap="anonymousFunc3" wx:for="{{loopArray115}}" wx:for-item="item" wx:for-index="__index3" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}"></text>
+                <image src="{{imgInfo.url}}" mode="widthFix"></image><text wx:key="id" style="{{item.$loopState__temp3}}" catchtap="anonymousFunc3" wx:for="{{loopArray11}}" wx:for-item="item" wx:for-index="__index3" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}"></text>
                 <block wx:if="{{!(starVisible === false)}}">
                     <view class="{{styles.star}}" style="{{anonymousState__temp4}}">
                         <view class="{{styles.oneTip}}">✨</view>
@@ -41,7 +41,7 @@
                         </view>
                     </view>
                 </block>
-                <image src="{{imgInfo.url_}}" mode="widthFix"></image><text wx:key="id" style="{{item.$loopState__temp6}}" catchtap="anonymousFunc5" wx:for="{{loopArray116}}" wx:for-item="item" wx:for-index="__index5" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey2}}"></text>
+                <image src="{{imgInfo.url_}}" mode="widthFix"></image><text wx:key="id" style="{{item.$loopState__temp6}}" catchtap="anonymousFunc5" wx:for="{{loopArray12}}" wx:for-item="item" wx:for-index="__index5" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey2}}"></text>
             </view>
         </view>
         <view class="{{styles.tipContainer}}">
@@ -51,7 +51,7 @@
                 <image src="https://gd-hbimg.huaban.com/e301e7a0a026832c13ba66cabbff902edb21bcb352c6-a4isoE_fw240webp"></image>提示{{' '}}</view>
         </view>
         <block wx:if="{{passVisible}}">
-            <pass-prompt compid="{{$compid__148}}"></pass-prompt>
+            <pass-prompt compid="{{$compid__14}}"></pass-prompt>
         </block>
         <block wx:if="{{!ing && pause}}">
             <view class="{{styles.setting}}" bindtap="anonymousFunc7">
@@ -61,7 +61,7 @@
                 </view>
             </view>
         </block>
-        <error-box compid="{{$compid__149}}"></error-box>
+        <error-box compid="{{$compid__15}}"></error-box>
         <block wx:if="{{isNewIphone}}">
             <view class="spacingIphone"></view>
         </block>

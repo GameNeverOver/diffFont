@@ -1,9 +1,9 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.choosePage}}">
         <view class="{{styles.levelContainer}}">
-            <mm-navigation compid="{{$compid__18}}"></mm-navigation>
+            <mm-navigation compid="{{$compid__16}}"></mm-navigation>
             <view class="{{styles.levelList}}">
-                <view wx:key="id" bindtap="anonymousFunc0" wx:for="{{loopArray17}}" wx:for-item="item" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+                <view wx:key="id" bindtap="anonymousFunc0" wx:for="{{loopArray13}}" wx:for-item="item" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
                     <image src="{{maxLevel > idx + 1 ? item.$original.url : imgLock}}"></image><text>第{{idx + 1}}关</text>
                 </view>
                 <view></view>

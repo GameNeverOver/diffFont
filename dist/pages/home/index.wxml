@@ -21,7 +21,7 @@
             </view><text>当前关卡：第{{maxLevel}}关</text>
         </view>
         <block wx:if="{{modeVisible}}">
-            <setting compid="{{$compid__14}}"></setting>
+            <setting compid="{{$compid__10}}"></setting>
         </block>
     </view>
 </block>
