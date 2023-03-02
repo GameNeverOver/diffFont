@@ -12,16 +12,14 @@
                 <image src="{{imgSetting}}"></image>设置</view>
             <view bindtap="anonymousFunc1">
                 <image src="{{imgChoose}}"></image>选关</view>
-            <view>
-                <image src="{{imgRank}}"></image>排名</view>
         </view>
         <view class="{{styles.start}}">
             <view bindtap="anonymousFunc2">开始游戏
                 <image src="{{imgClick}}"></image>
-            </view><text>当前关卡：第{{maxLevel}}关</text>
+            </view><text>当前关卡：第{{nowLevel}}关</text>
         </view>
         <block wx:if="{{modeVisible}}">
-            <setting compid="{{$compid__10}}"></setting>
+            <setting compid="{{$compid__147}}"></setting>
         </block>
     </view>
 </block>

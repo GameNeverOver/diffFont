@@ -1,10 +1,16 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.choosePage}}">
         <view class="{{styles.levelContainer}}">
-            <mm-navigation compid="{{$compid__16}}"></mm-navigation>
+            <mm-navigation compid="{{$compid__145}}"></mm-navigation>
             <view class="{{styles.levelList}}">
-                <view wx:key="id" bindtap="anonymousFunc0" wx:for="{{loopArray13}}" wx:for-item="item" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
-                    <image src="{{maxLevel > idx + 1 ? item.$original.url : imgLock}}"></image><text>第{{idx + 1}}关</text>
+                <view wx:key="$loopState__temp3" bindtap="anonymousFunc0" wx:for="{{loopArray85}}" wx:for-item="item" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+                    <block>
+                        <block wx:if="{{nowLevel >= idx + 1}}"><text class="{{styles.findFont}}">{{item.$original.font}}</text>
+                        </block>
+                        <block wx:else>
+                            <image src="{{imgLock}}"></image>
+                        </block>
+                    </block><text>第{{idx + 1}}关</text>
                 </view>
                 <view></view>
                 <view></view>

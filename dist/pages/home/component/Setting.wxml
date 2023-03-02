@@ -1,7 +1,7 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.setting}}" bindtap="anonymousFunc0">
         <view class="{{styles.setPopover + ' ' + styles.basePopover + ' '}}" catchtap="anonymousFunc1">
-            <view wx:key="id" wx:for="{{loopArray14}}" wx:for-item="item" wx:for-index="__index2"><text>{{item.$original.text}}</text>
+            <view wx:key="id" wx:for="{{loopArray23}}" wx:for-item="item" wx:for-index="__index2"><text>{{item.$original.text}}</text>
                 <switch id="{{item.$original.id}}" color="rgb(237, 132, 62)" checked="{{effectMode[item.$original.id]}}" bindchange="anonymousFunc2" data-e-change-so="this" data-e-change-a-a="{{item._$indexKey}}"></switch>
             </view>
         </view>

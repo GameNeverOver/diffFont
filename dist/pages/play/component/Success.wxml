@@ -1,0 +1,11 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.setting}}">
+        <view class="{{styles.passPopover + ' ' + styles.basePopover + ' '}}" style="{{anonymousState__temp}}">
+            <image src="https://gd-hbimg.huaban.com/4d791ca759ba9330f312bffdccae4eb4a4552a3822bad-VOFToS_fw480g"></image>
+            <view style="{{anonymousState__temp2}}">您可太厉害了，后面没有关卡啦！点击右上角 ... 分享给其他好友吧~</view>
+            <view style="{{anonymousState__temp3}}">您也可以联系创作者，VX：<text bindtap="anonymousFunc0">liu_iscool</text>进行催更哦~</view>
+            <view><text bindtap="anonymousFunc1">选择关卡</text><text bindtap="anonymousFunc2">返回首页</text>
+            </view>
+        </view>
+    </view>
+</block>

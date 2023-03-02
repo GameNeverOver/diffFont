@@ -1,67 +1,57 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.homePage}}">
-        <mm-navigation compid="{{$compid__12}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__160}}"></mm-navigation>
         <view class="{{styles.topBar}}">
             <view class="{{styles.barItem}}">
                 <image bindtap="anonymousFunc0" src="{{imgShouye}}"></image>
-                <image style="{{anonymousState__temp}}" bindtap="anonymousFunc1" src="{{ing ? imgEnd : imgStart}}"></image>
             </view>
             <view class="{{styles.progressInfo + ' ' + styles.barItem}}">
                 <view>第 {{nowLevel}} 关</view>
                 <view><text>{{fomatTime}}</text>
                 </view>
-                <five-box compid="{{$compid__13}}"></five-box>
+                <five-box compid="{{$compid__161}}"></five-box>
             </view>
-            <view class="{{styles.level + ' ' + styles.barItem}}"><text wx:key="id" class="{{findLength > idx ? styles.act : ''}}" wx:for="{{diffs}}" wx:for-item="item" wx:for-index="idx"></text>
+            <view class="{{styles.barItem}}" style="{{anonymousState__temp}}">
+                <image style="{{anonymousState__temp2}}" bindtap="anonymousFunc1" src="{{ing ? imgEnd : imgStart}}"></image>
             </view>
         </view>
         <view class="{{styles.diffImage}}">
-            <view bindtap="anonymousFunc2" class="{{'' + styles.imgBox}}">
-                <block wx:if="{{!((diffs.length > 0 && diffs.length) === findLength)}}">
+            <view class="{{'' + styles.fontBox}}">
+                <view wx:key="id" class="{{styles['font' + difficulty]}}" bindtap="anonymousFunc2" wx:for="{{loopArray94}}" wx:for-item="item" wx:for-index="__index2" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+                    <block wx:if="{{pass && item.$original.flag}}"><text></text>
+                    </block>{{item.$original.font}}</view>
+                <block wx:if="{{ing || !pass}}">
                     <view class="{{styles.door + ' ' + (ing ? styles.open : styles.close)}}">
                         <view class="{{styles.doorBar}}">
                             <view></view>
                         </view>
                     </view>
                 </block>
-                <image src="{{imgInfo.url}}" mode="widthFix"></image><text wx:key="id" style="{{item.$loopState__temp3}}" catchtap="anonymousFunc3" wx:for="{{loopArray11}}" wx:for-item="item" wx:for-index="__index3" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}"></text>
-                <block wx:if="{{!(starVisible === false)}}">
-                    <view class="{{styles.star}}" style="{{anonymousState__temp4}}">
-                        <view class="{{styles.oneTip}}">✨</view>
-                        <view class="{{styles.twoTip}}">✨</view>
-                        <view class="{{styles.threeTip}}">✨</view>
-                    </view>
-                </block>
-            </view>
-            <view bindtap="anonymousFunc4" class="{{styles.imgBox}}">
-                <block wx:if="{{!((diffs.length > 0 && diffs.length) === findLength)}}">
-                    <view class="{{styles.door + ' ' + (ing ? styles.open : styles.close)}}">
-                        <view class="{{styles.doorBar}}">
-                            <view></view>
-                        </view>
-                    </view>
-                </block>
-                <image src="{{imgInfo.url_}}" mode="widthFix"></image><text wx:key="id" style="{{item.$loopState__temp6}}" catchtap="anonymousFunc5" wx:for="{{loopArray12}}" wx:for-item="item" wx:for-index="__index5" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey2}}"></text>
             </view>
         </view>
+        <view class="{{styles.description}}" style="{{anonymousState__temp3}}">{{'请从 ' + diffsData[nowLevel - 1].font + diffsData[nowLevel - 1].pinyin + ' 中找到 ' + diffsData[nowLevel - 1]._font + diffsData[nowLevel - 1]._pinyin + ' '}}</view>
         <view class="{{styles.tipContainer}}">
-            <view class="{{styles.title}}"><text>当前视力：</text><text>5.2</text>
+            <view class="{{styles.title}}"><text>当前难度：</text>
+                <view>
+                    <image wx:key="$loopState__temp5" src="{{imgStar}}" wx:for="{{loopArray95}}" wx:for-item="item" wx:for-index="idx"></image>
+                </view>
             </view>
-            <view class="{{styles.tip}}" bindtap="anonymousFunc6">
-                <image src="https://gd-hbimg.huaban.com/e301e7a0a026832c13ba66cabbff902edb21bcb352c6-a4isoE_fw240webp"></image>提示{{' '}}</view>
         </view>
         <block wx:if="{{passVisible}}">
-            <pass-prompt compid="{{$compid__14}}"></pass-prompt>
+            <pass-prompt compid="{{$compid__162}}"></pass-prompt>
+        </block>
+        <block wx:if="{{isSuccess}}">
+            <success-box></success-box>
         </block>
         <block wx:if="{{!ing && pause}}">
-            <view class="{{styles.setting}}" bindtap="anonymousFunc7">
+            <view class="{{styles.setting}}" bindtap="anonymousFunc3">
                 <view class="{{styles.pausePopover}}">
                     <view>已暂停</view>
                     <view>点击继续</view>
                 </view>
             </view>
         </block>
-        <error-box compid="{{$compid__15}}"></error-box>
+        <error-box compid="{{$compid__163}}"></error-box>
         <block wx:if="{{isNewIphone}}">
             <view class="spacingIphone"></view>
         </block>

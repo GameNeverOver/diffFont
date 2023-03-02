@@ -1,4 +1,3 @@
-@import '@wmeimob/taro-design/src/components/styles/themes/default.less';
 @import '../../static/styles/index.less';
 .homePage {
   overflow-y: auto;
@@ -85,17 +84,82 @@
   }
 
   .diffImage {
-    width: 100%;
-    View.imgBox {
+    margin: auto;
+    // width: calc(100vw - 20px);
+    // height: calc(100vw - 20px);
+    margin: auto;
+    // background-color: #fff;
+    View.fontBox {
+      background-color: #fff;
       position: relative;
       margin-top: 20px;
-      // height: 33vh;
       width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow: hidden;
+      // 难度1
+      .font1 {
+        .flex_c();
+        width: calc((100vw - 50px) / 9);
+        height: calc((100vw - 50px) / 9);
+        line-height: calc((100vw - 50px) / 9);
+        font-size: calc((100vw - 50px) / 12);
+      }
+      // 难度2
+      .font2 {
+        .flex_c();
+        width: calc((100vw - 50px) / 10);
+        height: calc((100vw - 50px) / 10);
+        line-height: calc((100vw - 50px) / 10);
+        font-size: calc((100vw - 50px) / 13);
+      }
+      // 难度3
+      .font3 {
+        .flex_c();
+        width: calc((100vw - 50px) / 11);
+        height: calc((100vw - 50px) / 11);
+        line-height: calc((100vw - 50px) / 11);
+        font-size: calc((100vw - 50px) / 14);
+      }
+      // 难度4
+      .font4 {
+        .flex_c();
+        width: calc((100vw - 50px) / 12);
+        height: calc((100vw - 50px) / 12);
+        line-height: calc((100vw - 50px) / 12);
+        font-size: calc((100vw - 50px) / 15);
+      }
+      // 难度5
+      .font5 {
+        .flex_c();
+        width: calc((100vw - 50px) / 13);
+        height: calc((100vw - 50px) / 13);
+        line-height: calc((100vw - 50px) / 13);
+        font-size: calc((100vw - 50px) / 16);
+      }
+      // 难度6
+      .font6 {
+        .flex_c();
+        width: calc((100vw - 50px) / 14);
+        height: calc((100vw - 50px) / 14);
+        line-height: calc((100vw - 50px) / 14);
+        font-size: calc((100vw - 50px) / 17);
+      }
+      // 难度7
+      .font7 {
+        .flex_c();
+        width: calc((100vw - 50px) / 15);
+        height: calc((100vw - 50px) / 15);
+        line-height: calc((100vw - 50px) / 15);
+        font-size: calc((100vw - 50px) / 18);
+      }
+
       .door {
         overflow-x: hidden;
         position: absolute;
         top: 0;
-        // width: 100%;
         height: 100%;
         z-index: 11;
         left: 0;
@@ -121,13 +185,6 @@
           }
         }
       }
-      image {
-        border-radius: 10px;
-        display: block;
-        width: 100%;
-        // height: 100%;
-        // border: 1px solid rgb(114, 84, 84);
-      }
       text {
         z-index: 10;
         position: absolute;
@@ -137,30 +194,14 @@
         background-image: url(./img/right.png);
         background-size: 100% 100%;
       }
-      .star {
-        position: absolute;
-        z-index: 1;
-        view {
-          position: absolute;
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
-        }
-        .oneTip {
-          top: 20px;
-          left: 10px;
-          animation-name: opacityFlash1;
-        }
-        .twoTip {
-          animation-name: opacityFlash2;
-        }
-        .threeTip {
-          left: 20px;
-          animation-name: opacityFlash3;
-        }
-      }
     }
   }
-
+  .description {
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+  }
   .tipContainer {
     display: flex;
     align-items: center;
@@ -171,8 +212,15 @@
     .title {
       font-size: 20px;
       color: #eee;
-      text:last-child {
-        color: #fff;
+      display: flex;
+      align-items: center;
+      view {
+        display: flex;
+        align-items: center;
+        image {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
     .tip {

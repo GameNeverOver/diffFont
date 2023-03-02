@@ -4,7 +4,7 @@
             <block wx:if="{{!fail}}">
                 <image src="https://gd-hbimg.huaban.com/4d791ca759ba9330f312bffdccae4eb4a4552a3822bad-VOFToS_fw480g"></image>
             </block>
-            <view>{{fail ? '好遗憾，就差' + fail + '处不同了' : '太棒了，恭喜通关~'}}</view>
+            <view>{{fail ? '好遗憾，您没有找到' : '太棒了，恭喜通关~'}}</view>
             <view><text bindtap="anonymousFunc0">选择关卡</text><text bindtap="anonymousFunc1">{{fail ? '再试一次' : '下一关'}}</text>
             </view>
         </view>

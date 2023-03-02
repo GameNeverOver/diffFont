@@ -12,38 +12,27 @@ import $Store from '~/globalStore'
 import imgLock from './imgs/suo.png'
 
 const Index: FC = () => {
-  const { diffsData, maxLevel, setNowLevel } = useContext($Store)
+  const { diffsData, setNowLevel, nowLevel } = useContext($Store)
 
   return (
     <View className={styles.choosePage}>
       <View className={styles.levelContainer}>
-        <MMNavigation
-          type={MMNavigationType.Transparent}
-          title={`共计${diffsData.length}关`}
-        />
+        <MMNavigation type={MMNavigationType.Transparent} title={`共计${diffsData.length}关`} />
 
         <View className={styles.levelList}>
-          {[
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-            ...diffsData,
-          ].map((item, idx) => (
+          {diffsData.map((item, idx) => (
             <View
-              key={item.id}
+              key={item.id + idx}
               onClick={() => {
                 setNowLevel(idx + 1)
                 Taro.reLaunch({ url: `/pages/play/index` })
               }}
             >
-              <Image src={maxLevel > idx + 1 ? item.url : imgLock} />
+              {nowLevel >= idx + 1 ? (
+                <Text className={styles.findFont}>{item.font}</Text>
+              ) : (
+                <Image src={imgLock} />
+              )}
               <Text>第{idx + 1}关</Text>
             </View>
           ))}
@@ -53,7 +42,7 @@ const Index: FC = () => {
           <View />
           <View />
         </View>
-        {isNewIphone && <View className="spacingIphone" />}
+        {isNewIphone && <View className='spacingIphone' />}
       </View>
     </View>
   )

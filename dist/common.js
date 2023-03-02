@@ -74,7 +74,7 @@ module.exports = {"tabBarFontColor":"#cccccc","primaryColor":"#1890ff","iconSize
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.fomatOffset = exports.gameSeconds = exports.passAudio = exports.errorAudio = exports.successAudio = exports.myBgm = exports.gameName = undefined;
+exports.gameSeconds = exports.passAudio = exports.errorAudio = exports.successAudio = exports.myBgm = exports.gameName = undefined;
 
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
@@ -82,7 +82,7 @@ var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var gameSeconds = 120;
+var gameSeconds = 60;
 var gameName = ['我', '不', '是', '近', '视', '眼'];
 var errCallback = function errCallback(res) {
   console.log(res.errMsg, res.errCode);
@@ -104,16 +104,12 @@ errorAudio.onError(errCallback);
 var passAudio = _taroWeapp2.default.createInnerAudioContext();
 passAudio.src = 'https://img.tukuppt.com/newpreview_music/09/00/55/5c893391ee55466803.mp3';
 passAudio.onError(errCallback);
-var fomatOffset = function fomatOffset(percentage) {
-  return 'calc(' + percentage + '% - 15px)';
-};
 exports.gameName = gameName;
 exports.myBgm = myBgm;
 exports.successAudio = successAudio;
 exports.errorAudio = errorAudio;
 exports.passAudio = passAudio;
 exports.gameSeconds = gameSeconds;
-exports.fomatOffset = fomatOffset;
 
 /***/ }),
 
@@ -142,20 +138,146 @@ var _mobx = __webpack_require__(/*! mobx */ "./node_modules/mobx/lib/mobx.module
 
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
-var _index = __webpack_require__(/*! ./consts/index */ "./src/consts/index.tsx");
+var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var diffList = [{
+  id: 1,
+  font: '士',
+  _font: '土',
+  pinyin: '（shì）',
+  _pinyin: '（tǔ）'
+}, {
+  id: 2,
+  font: '干',
+  _font: '千',
+  pinyin: '（gàn）',
+  _pinyin: '（qiān）'
+}, {
+  id: 3,
+  font: '曰',
+  _font: '日',
+  pinyin: '（yuē）',
+  _pinyin: '（rì）'
+}, {
+  id: 4,
+  font: '博',
+  _font: '傅',
+  pinyin: '（bó）',
+  _pinyin: '（fù）'
+}, {
+  id: 5,
+  font: '休',
+  _font: '体',
+  pinyin: '（xiū）',
+  _pinyin: '（tǐ）'
+}, {
+  id: 6,
+  font: '耍',
+  _font: '䎡',
+  pinyin: '（shuǎ）',
+  _pinyin: '（nuǎn）'
+}, {
+  id: 7,
+  font: '牡',
+  _font: '牲',
+  pinyin: '（mǔ）',
+  _pinyin: '（shēng）'
+}, {
+  id: 8,
+  font: '苗',
+  _font: '苖',
+  pinyin: '（miáo）',
+  _pinyin: '（dí）'
+}, {
+  id: 9,
+  font: '兇',
+  _font: '兕',
+  pinyin: '（xiōng）',
+  _pinyin: '（sì）'
+}, {
+  id: 10,
+  font: '罯',
+  _font: '詈',
+  pinyin: '（ǎn）',
+  _pinyin: '（lì）'
+}, {
+  id: 11,
+  font: '肬',
+  _font: '胧',
+  pinyin: '（yóu）',
+  _pinyin: '（lóng）'
+}, {
+  id: 12,
+  font: '妹',
+  _font: '妺',
+  pinyin: '（mèi）',
+  _pinyin: '（mò）'
+}, {
+  id: 13,
+  font: '畲',
+  _font: '畬',
+  pinyin: '（shē）',
+  _pinyin: '（shē）'
+}, {
+  id: 14,
+  font: '胄',
+  _font: '冑',
+  pinyin: '（zhòu）',
+  _pinyin: '（zhòu）'
+}, {
+  id: 15,
+  font: '塵',
+  _font: '麈',
+  pinyin: '（chén）',
+  _pinyin: '（zhǔ）'
+}, {
+  id: 16,
+  font: '袄',
+  _font: '祆',
+  pinyin: '（ǎo）',
+  _pinyin: '（xiān）'
+}, {
+  id: 17,
+  font: '淰',
+  _font: '谂',
+  pinyin: '（niǎn）',
+  _pinyin: '（shěn）'
+}, {
+  id: 18,
+  font: '喏',
+  _font: '啱',
+  pinyin: '（nuò）',
+  _pinyin: '（yán）'
+}, {
+  id: 19,
+  font: '薄',
+  _font: '簿',
+  pinyin: '（báo）',
+  _pinyin: '（bó）'
+}, {
+  id: 20,
+  font: '描',
+  _font: '猫',
+  pinyin: '（miáo）',
+  _pinyin: '（māo）'
+}];
+
 var Store = function () {
   function Store() {
     _classCallCheck(this, Store);
 
+    // 难度  max7
+    this.difficulty = 1;
     // 当前关卡
     this.nowLevel = 1;
     // 当前关卡
-    this.maxLevel = 1;
+    this.maxLevel = 140;
     // 音效相关
     this.effectMode = {
       bgm: false,
@@ -163,135 +285,20 @@ var Store = function () {
       vibrate: true
     };
     // 数据
-    this.diffsData = [{
-      id: 1,
-      name: '饼干和信盒',
-      type: 1,
-      url: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673417316598-ad721c80-9aa2-4d2e-bbd2-208f0c8a0bf9.jpeg',
-      url_: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673417325197-20a2c3c7-1f7f-4a75-ad8f-c8bf299035a2.jpeg?x-oss-process=image%2Fresize%2Cw_674%2Climit_0%2Finterlace%2C1',
-      diffs: [{
-        id: 1,
-        find: false,
-        left: (0, _index.fomatOffset)(17.56),
-        top: (0, _index.fomatOffset)(37.79)
-      }, {
-        id: 2,
-        find: false,
-        left: (0, _index.fomatOffset)(52.77),
-        top: (0, _index.fomatOffset)(33.48)
-      }, {
-        id: 3,
-        find: false,
-        left: (0, _index.fomatOffset)(49.71),
-        top: (0, _index.fomatOffset)(64.37)
-      }, {
-        id: 4,
-        find: false,
-        left: (0, _index.fomatOffset)(74.57),
-        top: (0, _index.fomatOffset)(37.97)
-      }, {
-        id: 5,
-        find: false,
-        left: (0, _index.fomatOffset)(68.42),
-        top: (0, _index.fomatOffset)(84.48)
-      }, {
-        id: 6,
-        find: false,
-        left: (0, _index.fomatOffset)(22.07),
-        top: (0, _index.fomatOffset)(64.78)
-      }, {
-        id: 7,
-        find: false,
-        left: (0, _index.fomatOffset)(71.34),
-        top: (0, _index.fomatOffset)(8.35)
-      }]
-    }, {
-      id: 2,
-      name: '向日葵',
-      type: 1,
-      url: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673416833237-93d09b57-d26e-4732-8ee6-540b438550a9.jpeg',
-      url_: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673418238548-f13f44f9-6f6a-4ee2-9a31-056696b0ad90.jpeg',
-      diffs: [{
-        id: 1,
-        find: false,
-        left: '6.5%',
-        top: '5.8%'
-      }, {
-        id: 2,
-        find: false,
-        left: '24.9%',
-        top: '81%'
-      }, {
-        id: 3,
-        find: false,
-        left: '55.7%',
-        top: '32%'
-      }, {
-        id: 4,
-        find: false,
-        left: '29.3%',
-        top: '7.7%'
-      }, {
-        id: 5,
-        find: false,
-        left: '41.5%',
-        top: '67.6%'
-      }, {
-        id: 6,
-        find: false,
-        left: '90.3%',
-        top: '6%'
-      }]
-    }, {
-      id: 3,
-      name: '新年快乐',
-      type: 3,
-      url: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673505835266-d5a61156-b261-4e87-a05b-d0d8668c6b3b.jpeg',
-      url_: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673505846365-3f213c47-d2c2-4118-9a59-472f04d1d1b0.jpeg',
-      diffs: [{
-        id: 1,
-        find: false,
-        left: '8.8%',
-        top: '8.7%'
-      }, {
-        id: 2,
-        find: false,
-        left: '85%',
-        top: '8.2%'
-      }, {
-        id: 3,
-        find: false,
-        left: '47.6%',
-        top: '10%'
-      }, {
-        id: 4,
-        find: false,
-        left: '22.7%',
-        top: '87%'
-      }, {
-        id: 5,
-        find: false,
-        left: '41.7%',
-        top: '56.2%'
-      }, {
-        id: 6,
-        find: false,
-        left: '42.3%',
-        top: '72.2%'
-      }]
-    }];
+    this.diffsData = [].concat(diffList, diffList, diffList, diffList, diffList, diffList, diffList);
   }
 
   _createClass(Store, [{
-    key: "setNowLevel",
+    key: 'setNowLevel',
     value: function setNowLevel(num) {
-      this.nowLevel = num;
-      if (num > this.maxLevel) {
-        this.maxLevel = num;
+      if (this.maxLevel >= num) {
+        this.nowLevel = num;
+        this.difficulty = Math.ceil(num / 20);
+        _taroWeapp2.default.setStorageSync('__level', num);
       }
     }
   }, {
-    key: "setEffectMode",
+    key: 'setEffectMode',
     value: function setEffectMode(val, field) {
       this.effectMode = _extends({}, this.effectMode, _defineProperty({}, field, val));
     }
@@ -301,6 +308,7 @@ var Store = function () {
 }();
 
 (0, _mobx.decorate)(Store, {
+  difficulty: _mobx.observable,
   nowLevel: _mobx.observable,
   maxLevel: _mobx.observable,
   effectMode: _mobx.observable,
@@ -687,7 +695,7 @@ module.exports = {"flex_c":"index-module__flex_c___K2j8-","flex_s":"index-module
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"flex_c":"index-module__flex_c___2rik1","flex_s":"index-module__flex_s___26ASS","ellipsis":"index-module__ellipsis___2rgHx","close":"index-module__close___1uMkK","closeDoor":"index-module__closeDoor___2uFoq","open":"index-module__open___3HsSM","openDoor":"index-module__openDoor___1Dkq0","homePage":"index-module__homePage___1dYx0","topBar":"index-module__topBar___1sai-","barItem":"index-module__barItem___MHQyS","level":"index-module__level___1_cXI","act":"index-module__act___RgR6p","progressInfo":"index-module__progressInfo___39uCl","diffImage":"index-module__diffImage___2r7H3","imgBox":"index-module__imgBox___3ipfP","door":"index-module__door___zjLPo","doorBar":"index-module__doorBar___yp2nt","star":"index-module__star___2J8TC","oneTip":"index-module__oneTip___1ej7R","opacityFlash1":"index-module__opacityFlash1___308T0","twoTip":"index-module__twoTip___1VDcY","opacityFlash2":"index-module__opacityFlash2___21VhQ","threeTip":"index-module__threeTip___1i9JU","opacityFlash3":"index-module__opacityFlash3___2O4yF","tipContainer":"index-module__tipContainer___mhNTy","title":"index-module__title___2yXGC","tip":"index-module__tip___CTVl9","fiveBox":"index-module__fiveBox___1uqYC","moveFive":"index-module__moveFive___1S2Hh","errorBox":"index-module__errorBox___2ce88","moveNone":"index-module__moveNone___VJYT4","setting":"index-module__setting___1TZk2","basePopover":"index-module__basePopover___KCaTs","setPopover":"index-module__setPopover___3yQ8q","passPopover":"index-module__passPopover___1Hjue","pausePopover":"index-module__pausePopover___1t3p_"};
+module.exports = {"flex_c":"index-module__flex_c___2rik1","flex_s":"index-module__flex_s___26ASS","ellipsis":"index-module__ellipsis___2rgHx","close":"index-module__close___1uMkK","closeDoor":"index-module__closeDoor___2uFoq","open":"index-module__open___3HsSM","openDoor":"index-module__openDoor___1Dkq0","homePage":"index-module__homePage___1dYx0","topBar":"index-module__topBar___1sai-","barItem":"index-module__barItem___MHQyS","level":"index-module__level___1_cXI","act":"index-module__act___RgR6p","progressInfo":"index-module__progressInfo___39uCl","diffImage":"index-module__diffImage___2r7H3","fontBox":"index-module__fontBox___3EL_9","font1":"index-module__font1___36XKY","font2":"index-module__font2___1nnMS","font3":"index-module__font3___19Pt2","font4":"index-module__font4___2dRr6","font5":"index-module__font5___13vE1","font6":"index-module__font6___1g8ZD","font7":"index-module__font7___1RAT2","door":"index-module__door___zjLPo","doorBar":"index-module__doorBar___yp2nt","description":"index-module__description___1kSkY","tipContainer":"index-module__tipContainer___mhNTy","title":"index-module__title___2yXGC","tip":"index-module__tip___CTVl9","fiveBox":"index-module__fiveBox___1uqYC","moveFive":"index-module__moveFive___1S2Hh","errorBox":"index-module__errorBox___2ce88","moveNone":"index-module__moveNone___VJYT4","setting":"index-module__setting___1TZk2","basePopover":"index-module__basePopover___KCaTs","setPopover":"index-module__setPopover___3yQ8q","passPopover":"index-module__passPopover___1Hjue","pausePopover":"index-module__pausePopover___1t3p_","opacityFlash1":"index-module__opacityFlash1___308T0","opacityFlash2":"index-module__opacityFlash2___21VhQ","opacityFlash3":"index-module__opacityFlash3___2O4yF"};
 
 /***/ })
 

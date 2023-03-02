@@ -14,8 +14,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -58,6 +56,10 @@ var _zanting = __webpack_require__(/*! ./img/zanting.png */ "./src/pages/play/im
 
 var _zanting2 = _interopRequireDefault(_zanting);
 
+var _start = __webpack_require__(/*! ./img/start.png */ "./src/pages/play/img/start.png");
+
+var _start2 = _interopRequireDefault(_start);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -90,7 +92,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '火眼精金',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp4", "anonymousState__temp7", "loopArray11", "loopArray12", "$compid__12", "$compid__13", "$compid__14", "$compid__15", "styles", "imgShouye", "ing", "imgEnd", "imgStart", "findLength", "diffs", "imgInfo", "starVisible", "passVisible", "pause", "isNewIphone", "nowLevel", "fomatTime"], _this.anonymousFunc3Map = {}, _this.anonymousFunc5Map = {}, _this.customComponents = ["MMNavigation", "FiveBox", "PassPrompt", "ErrorBox"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp6", "loopArray94", "loopArray95", "$compid__160", "$compid__161", "$compid__162", "$compid__163", "styles", "imgShouye", "ing", "imgEnd", "imgStart", "difficulty", "fontInfo", "pass", "imgStar", "$anonymousCallee__19", "passVisible", "isSuccess", "pause", "isNewIphone", "nowLevel", "fomatTime", "diffsData"], _this.anonymousFunc2Map = {}, _this.customComponents = ["MMNavigation", "FiveBox", "PassPrompt", "SuccessBox", "ErrorBox"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -111,27 +113,29 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__160"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__12 = _genCompid2[0],
-          $compid__12 = _genCompid2[1];
+          $prevCompid__160 = _genCompid2[0],
+          $compid__160 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__161"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__13 = _genCompid4[0],
-          $compid__13 = _genCompid4[1];
+          $prevCompid__161 = _genCompid4[0],
+          $compid__161 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__162"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__14 = _genCompid6[0],
-          $compid__14 = _genCompid6[1];
+          $prevCompid__162 = _genCompid6[0],
+          $compid__162 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__163"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__15 = _genCompid8[0],
-          $compid__15 = _genCompid8[1];
+          $prevCompid__163 = _genCompid8[0],
+          $compid__163 = _genCompid8[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
+          maxLevel = _useContext.maxLevel,
+          difficulty = _useContext.difficulty,
           nowLevel = _useContext.nowLevel,
           effectMode = _useContext.effectMode,
           diffsData = _useContext.diffsData,
@@ -150,92 +154,77 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           _useState4 = _slicedToArray(_useState3, 2),
           ing = _useState4[0],
           setIng = _useState4[1];
+      // 是否过关
+
+
+      var _useState5 = (0, _taroWeapp.useState)(false),
+          _useState6 = _slicedToArray(_useState5, 2),
+          pass = _useState6[0],
+          setPass = _useState6[1];
       // 点击错误的次数
 
 
-      var _useState5 = (0, _taroWeapp.useState)([]),
-          _useState6 = _slicedToArray(_useState5, 2),
-          fiveList = _useState6[0],
-          setFiveList = _useState6[1];
-      // 通关的显示
-
-
-      var _useState7 = (0, _taroWeapp.useState)(false),
+      var _useState7 = (0, _taroWeapp.useState)([]),
           _useState8 = _slicedToArray(_useState7, 2),
-          passVisible = _useState8[0],
-          setPassVisible = _useState8[1];
-      // 暂停的显示
+          fiveList = _useState8[0],
+          setFiveList = _useState8[1];
+      // 通关的显示
 
 
       var _useState9 = (0, _taroWeapp.useState)(false),
           _useState10 = _slicedToArray(_useState9, 2),
-          pause = _useState10[0],
-          setPause = _useState10[1];
-      // 图片信息
+          passVisible = _useState10[0],
+          setPassVisible = _useState10[1];
+      // 暂停的显示
 
 
-      var _useState11 = (0, _taroWeapp.useState)({
-        url: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673417316598-ad721c80-9aa2-4d2e-bbd2-208f0c8a0bf9.jpeg',
-        url_: 'https://cdn.nlark.com/yuque/0/2023/jpeg/559692/1673417325197-20a2c3c7-1f7f-4a75-ad8f-c8bf299035a2.jpeg?x-oss-process=image%2Fresize%2Cw_674%2Climit_0%2Finterlace%2C1'
-      }),
+      var _useState11 = (0, _taroWeapp.useState)(false),
           _useState12 = _slicedToArray(_useState11, 2),
-          imgInfo = _useState12[0],
-          setImgInfo = _useState12[1];
-      // 图片不同处的位置
+          pause = _useState12[0],
+          setPause = _useState12[1];
+      // 错误的次数
 
 
       var _useState13 = (0, _taroWeapp.useState)([]),
           _useState14 = _slicedToArray(_useState13, 2),
-          diffs = _useState14[0],
-          setDiffs = _useState14[1];
-      // 是否显示提示
+          errorList = _useState14[0],
+          setErrorList = _useState14[1];
+      // 字体
 
 
-      var _useState15 = (0, _taroWeapp.useState)(false),
+      var _useState15 = (0, _taroWeapp.useState)([]),
           _useState16 = _slicedToArray(_useState15, 2),
-          starVisible = _useState16[0],
-          setStarVisible = _useState16[1];
-      // 错误的次数
+          fontInfo = _useState16[0],
+          setFontInfo = _useState16[1];
+      // success
 
 
-      var _useState17 = (0, _taroWeapp.useState)([]),
+      var _useState17 = (0, _taroWeapp.useState)(false),
           _useState18 = _slicedToArray(_useState17, 2),
-          errorList = _useState18[0],
-          setErrorList = _useState18[1];
+          isSuccess = _useState18[0],
+          setIsSuccess = _useState18[1];
 
       var fomatTime = (0, _taroWeapp.useMemo)(function () {
         var minutes = Math.floor(countdown / 60);
         var seconds = minutes < 0 ? 0 : countdown - minutes * 60;
         return "0" + (minutes < 0 ? 0 : minutes) + " : " + (seconds > 9 ? '' : 0) + seconds;
       }, [countdown]);
-      var findLength = (0, _taroWeapp.useMemo)(function () {
-        var length = 0;
-        diffs.forEach(function (v) {
-          if (v.find) {
-            length++;
-          }
-        });
-        return length;
-      }, [diffs]);
       var queryLevel = function queryLevel(num) {
-        setImgInfo({
-          url: diffsData[num - 1].url,
-          url_: diffsData[num - 1].url_
+        var difficultyNum = [81, 100, 121, 144, 169, 196, 225][difficulty - 1];
+        console.log(nowLevel, difficulty);
+        var random = parseInt(Math.random() * difficultyNum);
+        var list = Array.from(Array(difficultyNum), function (_, n) {
+          return {
+            flag: n === random ? true : false,
+            id: n,
+            font: n === random ? diffsData[num - 1]._font : diffsData[num - 1].font
+          };
         });
-        setDiffs(JSON.parse(JSON.stringify(diffsData[num - 1].diffs)));
+        setFontInfo(list);
         setIng(true);
       };
       // 点击错误的话-5s
       var reduceFive = function reduceFive(e) {
-        // 屏幕的横纵坐标要减去的  苹果666
-        // 27,  135
-        // 宽    高
-        // 337, 225   --
-        // return console.log(
-        //   (((e.detail.x - 20) / 337) * 100).toFixed(2),
-        //   (((e.detail.y - 128) / 225) * 100).toFixed(2),
-        //   'x...'
-        // )
         effectMode.click && _index2.errorAudio.play();
         effectMode.vibrate && _taroWeapp2.default.vibrateLong();
         setErrorList([].concat(_toConsumableArray(errorList), [e.detail]));
@@ -270,42 +259,36 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       (0, _taroWeapp.useEffect)(function () {
         duration = _index2.gameSeconds;
         queryLevel(nowLevel);
-        effectMode.bgm && _index2.myBgm.play();
+        // effectMode.bgm && myBgm.play()
       }, []);
-      (0, _taroWeapp.useEffect)(function () {
-        if (diffs.length && diffs.every(function (v) {
-          return v.find;
-        })) {
-          _index2.passAudio.play();
-          setPassVisible(true);
-          setIng(false);
-          clearInterval(timer);
-          setNowLevel(nowLevel + 1);
-        }
-      }, [diffs]);
-      // 获取提示
-      var openTip = function openTip() {
-        var temp = diffs.find(function (v) {
-          return v.find === false;
-        });
-        if (temp) {
-          setStarVisible(temp);
-        }
-      };
       // 再来一次 / 下一关
       var tryAgain = function tryAgain() {
         duration = _index2.gameSeconds;
+        setPass(false);
         setCountdown(_index2.gameSeconds);
         setPassVisible(false);
         setFiveList([]);
         setErrorList([]);
         queryLevel(nowLevel);
       };
+      var passFunc = function passFunc() {
+        setPass(true);
+        _index2.passAudio.play();
+        setPassVisible(true);
+        setIng(false);
+        clearInterval(timer);
+        if (nowLevel === maxLevel) {
+          setIsSuccess(true);
+        } else {
+          setNowLevel(nowLevel + 1);
+        }
+      };
       var backHome = function backHome() {
         _taroWeapp2.default.switchTab({ url: '/pages/home/index' });
       };
       this.anonymousFunc0 = backHome;
-      var anonymousState__temp = (0, _taroWeapp.internal_inline_style)({
+      var anonymousState__temp = (0, _taroWeapp.internal_inline_style)({ textAlign: 'right' });
+      var anonymousState__temp2 = (0, _taroWeapp.internal_inline_style)({
         marginTop: '5px'
       });
 
@@ -314,126 +297,87 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         setPause(true);
       };
 
-      this.anonymousFunc2 = reduceFive;
-      var anonymousState__temp4 = (0, _taroWeapp.internal_inline_style)({
-        left: starVisible.left,
-        top: starVisible.top
-      });
-      this.anonymousFunc4 = reduceFive;
-      this.anonymousFunc6 = openTip;
-      var anonymousState__temp7 = passVisible ? diffs.length - findLength : null;
+      var anonymousState__temp3 = (0, _taroWeapp.internal_inline_style)({ opacity: pass ? 0 : 1 });
+      var anonymousState__temp6 = passVisible ? !pass : null;
 
-      this.anonymousFunc7 = function () {
+      this.anonymousFunc3 = function () {
         setIng(true);
         setPause(false);
       };
 
-      var loopArray11 = diffs.map(function (item, __index3) {
+      var $anonymousCallee__19 = Array(difficulty).fill(100);
+      var loopArray94 = fontInfo.map(function (item, __index2) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
-        var $loopState__temp3 = (0, _taroWeapp.internal_inline_style)({
-          top: item.$original.top,
-          left: item.$original.left,
-          opacity: item.$original.find ? 0.9 : 0
-        });
 
-        var _$indexKey = "jzzzz" + __index3;
+        var _$indexKey = "gfzzz" + __index2;
 
-        _this2.anonymousFunc3Map[_$indexKey] = function (e) {
-          e.stopPropagation();
-          effectMode.click && _index2.successAudio.play();
-          if (starVisible && starVisible.id === item.$original.id) {
-            setStarVisible(false);
+        _this2.anonymousFunc2Map[_$indexKey] = function (e) {
+          if (item.$original.flag) {
+            passFunc();
+          } else {
+            reduceFive(e);
           }
-          setDiffs(function () {
-            return diffs.map(function (v) {
-              if (v.id === item.$original.id) {
-                item.$original.find = true;
-              }
-              return v;
-            });
-          });
         };
 
         return {
-          $loopState__temp3: $loopState__temp3,
           _$indexKey: _$indexKey,
           $original: item.$original
         };
       });
-      var loopArray12 = diffs.map(function (item, __index5) {
+      var loopArray95 = Array(difficulty).fill(100).map(function (item, idx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
-        var $loopState__temp6 = (0, _taroWeapp.internal_inline_style)({
-          top: item.$original.top,
-          left: item.$original.left,
-          opacity: item.$original.find ? 1 : 0
-        });
-
-        var _$indexKey2 = "bazzz" + __index5;
-
-        _this2.anonymousFunc5Map[_$indexKey2] = function (e) {
-          e.stopPropagation();
-          effectMode.click && _index2.successAudio.play();
-          if (starVisible && starVisible.id === item.$original.id) {
-            setStarVisible(false);
-          }
-          setDiffs(function () {
-            return diffs.map(function (v) {
-              if (v.id === item.$original.id) {
-                item.$original.find = true;
-              }
-              return v;
-            });
-          });
-        };
-
+        var $loopState__temp5 = item.$original + idx;
         return {
-          $loopState__temp6: $loopState__temp6,
-          _$indexKey2: _$indexKey2,
+          $loopState__temp5: $loopState__temp5,
           $original: item.$original
         };
       });
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": ""
-      }, $compid__12, $prevCompid__12);
+      }, $compid__160, $prevCompid__160);
       _taroWeapp.propsManager.set({
         "list": fiveList
-      }, $compid__13, $prevCompid__13);
+      }, $compid__161, $prevCompid__161);
       passVisible && _taroWeapp.propsManager.set({
-        "fail": anonymousState__temp7,
+        "fail": anonymousState__temp6,
         "tryAgain": tryAgain
-      }, $compid__14, $prevCompid__14);
+      }, $compid__162, $prevCompid__162);
       _taroWeapp.propsManager.set({
         "list": errorList
-      }, $compid__15, $prevCompid__15);
+      }, $compid__163, $prevCompid__163);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        anonymousState__temp4: anonymousState__temp4,
-        anonymousState__temp7: anonymousState__temp7,
-        loopArray11: loopArray11,
-        loopArray12: loopArray12,
-        $compid__12: $compid__12,
-        $compid__13: $compid__13,
-        $compid__14: $compid__14,
-        $compid__15: $compid__15,
+        anonymousState__temp2: anonymousState__temp2,
+        anonymousState__temp3: anonymousState__temp3,
+        anonymousState__temp6: anonymousState__temp6,
+        loopArray94: loopArray94,
+        loopArray95: loopArray95,
+        $compid__160: $compid__160,
+        $compid__161: $compid__161,
+        $compid__162: $compid__162,
+        $compid__163: $compid__163,
         styles: styles,
         imgShouye: _home2.default,
         ing: ing,
         imgEnd: _zanting2.default,
         imgStart: _bofang2.default,
-        findLength: findLength,
-        diffs: diffs,
-        imgInfo: imgInfo,
-        starVisible: starVisible,
+        difficulty: difficulty,
+        fontInfo: fontInfo,
+        pass: pass,
+        imgStar: _start2.default,
+        $anonymousCallee__19: $anonymousCallee__19,
         passVisible: passVisible,
+        isSuccess: isSuccess,
         pause: pause,
         isNewIphone: _index.isNewIphone,
         nowLevel: nowLevel,
-        fomatTime: fomatTime
+        fomatTime: fomatTime,
+        diffsData: diffsData
       });
       return this.__state;
     }
@@ -449,52 +393,26 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     }
   }, {
     key: "anonymousFunc2",
-    value: function anonymousFunc2(e) {
+    value: function anonymousFunc2(_$indexKey) {
+      var _anonymousFunc2Map;
+
       ;
-    }
-  }, {
-    key: "anonymousFunc3",
-    value: function anonymousFunc3(_$indexKey) {
-      var _anonymousFunc3Map;
 
       for (var _len2 = arguments.length, e = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
         e[_key2 - 1] = arguments[_key2];
       }
 
-      (typeof e === "undefined" ? "undefined" : _typeof(e)) === 'object' && e.stopPropagation && e.stopPropagation();
-      return this.anonymousFunc3Map[_$indexKey] && (_anonymousFunc3Map = this.anonymousFunc3Map)[_$indexKey].apply(_anonymousFunc3Map, e);
+      return this.anonymousFunc2Map[_$indexKey] && (_anonymousFunc2Map = this.anonymousFunc2Map)[_$indexKey].apply(_anonymousFunc2Map, e);
     }
   }, {
-    key: "anonymousFunc4",
-    value: function anonymousFunc4(e) {
-      ;
-    }
-  }, {
-    key: "anonymousFunc5",
-    value: function anonymousFunc5(_$indexKey2) {
-      var _anonymousFunc5Map;
-
-      for (var _len3 = arguments.length, e = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
-        e[_key3 - 1] = arguments[_key3];
-      }
-
-      (typeof e === "undefined" ? "undefined" : _typeof(e)) === 'object' && e.stopPropagation && e.stopPropagation();
-      return this.anonymousFunc5Map[_$indexKey2] && (_anonymousFunc5Map = this.anonymousFunc5Map)[_$indexKey2].apply(_anonymousFunc5Map, e);
-    }
-  }, {
-    key: "anonymousFunc6",
-    value: function anonymousFunc6(e) {
-      ;
-    }
-  }, {
-    key: "anonymousFunc7",
-    value: function anonymousFunc7(e) {
+    key: "anonymousFunc3",
+    value: function anonymousFunc3(e) {
       ;
     }
   }]);
 
   return Index;
-}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7"], _class.$$componentPath = "pages/play/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3"], _class.$$componentPath = "pages/play/index", _temp2);
 
 
 Index.config = { navigationBarTitleText: '火眼精金', navigationStyle: 'custom' };
@@ -504,10 +422,10 @@ Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/
 
 /***/ }),
 
-/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/pages/play/index.tsx?taro&type=template&parse=PAGE& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diffFont/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diffFont/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./src/pages/play/index.tsx?taro&type=template&parse=PAGE& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -534,6 +452,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "./src/pages/play/img/start.png":
+/*!**************************************!*\
+  !*** ./src/pages/play/img/start.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
 
 /***/ }),
 
@@ -591,9 +520,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=PAGE& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diff/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&");
-/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diff_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diffFont_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!file-loader?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diffFont/src!../../../node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!../../../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js??ref--6-0!./index.tsx?taro&type=template&parse=PAGE& */ "./node_modules/file-loader/dist/cjs.js?name=[path][name].wxml&context=/Users/liuyongwei/Desktop/games/diffFont/src!./node_modules/@tarojs/mini-runner/dist/loaders/miniTemplateLoader.js!./node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/pages/play/index.tsx?taro&type=template&parse=PAGE&");
+/* harmony import */ var _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diffFont_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diffFont_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diffFont_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _file_loader_name_path_name_wxml_context_Users_liuyongwei_Desktop_games_diffFont_src_node_modules_tarojs_mini_runner_dist_loaders_miniTemplateLoader_js_node_modules_tarojs_mini_runner_dist_loaders_wxTransformerLoader_js_ref_6_0_index_tsx_taro_type_template_parse_PAGE___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ })

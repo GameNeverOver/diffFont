@@ -4,10 +4,10 @@ import Taro, { FC } from '@tarojs/taro'
 import * as styles from '../index.module.less'
 
 const list = [
-  {
-    text: '背景音乐',
-    id: 'bgm',
-  },
+  // {
+  //   text: '背景音乐',
+  //   id: 'bgm',
+  // },
   {
     text: '点击音效',
     id: 'click',
@@ -31,14 +31,14 @@ const Setting: FC<any> = ({ effectMode, setEffectMode, setModeVisible }) => {
     <View className={styles.setting} onClick={isVisible}>
       <View
         className={`${styles.setPopover} ${styles.basePopover} `}
-        onClick={(e) => e.stopPropagation()}
+        onClick={e => e.stopPropagation()}
       >
-        {list.map((item) => (
+        {list.map(item => (
           <View key={item.id}>
             <Text>{item.text}</Text>
             <Switch
               id={item.id}
-              color="rgb(237, 132, 62)"
+              color='rgb(237, 132, 62)'
               checked={effectMode[item.id]}
               onChange={changeMode}
             />

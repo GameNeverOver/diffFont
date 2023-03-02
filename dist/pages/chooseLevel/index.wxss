@@ -124,6 +124,14 @@
   text-align: center;
   padding: 5px;
 }
+.index-module__choosePage___2hhus .index-module__levelList___-GFTg view .index-module__findFont___1l-u- {
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  margin-bottom: 3px;
+  color: #d33e10;
+  font-weight: 700;
+}
 .index-module__choosePage___2hhus .index-module__levelList___-GFTg view image {
   width: 40px;
   height: 40px;
