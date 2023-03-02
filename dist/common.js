@@ -208,65 +208,126 @@ var diffList = [{
   _pinyin: '（lì）'
 }, {
   id: 11,
+  font: '戒',
+  _font: '戎',
+  pinyin: '（jiè）',
+  _pinyin: '（róng）'
+}, {
+  id: 12,
+  font: '崇',
+  _font: '祟',
+  pinyin: '（chóng）',
+  _pinyin: '（suì）'
+}, {
+  id: 13,
+  font: '历',
+  _font: '厉',
+  pinyin: '（lì）',
+  _pinyin: '（lì）'
+}, {
+  id: 14,
+  font: '畔',
+  _font: '衅',
+  pinyin: '（pàn）',
+  _pinyin: '（xìn）'
+}, {
+  id: 15,
+  font: '治',
+  _font: '冶',
+  pinyin: '（zhì）',
+  _pinyin: '（yě）'
+}, {
+  id: 16,
+  font: '誉',
+  _font: '誊',
+  pinyin: '（yù）',
+  _pinyin: '（téng）'
+}, {
+  id: 17,
+  font: '秦',
+  _font: '奏',
+  pinyin: '（qín）',
+  _pinyin: '（zòu）'
+}, {
+  id: 18,
+  font: '外',
+  _font: '处',
+  pinyin: '（wài）',
+  _pinyin: '（chù）'
+}, {
+  id: 19,
+  font: '奖',
+  _font: '桨',
+  pinyin: '（jiǎng）',
+  _pinyin: '（jiǎng）'
+}, {
+  id: 20,
+  font: '沈',
+  _font: '忱',
+  pinyin: '（shěn）',
+  _pinyin: '（chén）'
+}, {
+  id: 21,
   font: '肬',
   _font: '胧',
   pinyin: '（yóu）',
   _pinyin: '（lóng）'
 }, {
-  id: 12,
+  id: 22,
   font: '妹',
   _font: '妺',
   pinyin: '（mèi）',
   _pinyin: '（mò）'
 }, {
-  id: 13,
+  id: 23,
   font: '畲',
   _font: '畬',
   pinyin: '（shē）',
   _pinyin: '（shē）'
 }, {
-  id: 14,
+  id: 24,
   font: '胄',
   _font: '冑',
   pinyin: '（zhòu）',
   _pinyin: '（zhòu）'
 }, {
-  id: 15,
+  id: 25,
   font: '塵',
   _font: '麈',
   pinyin: '（chén）',
   _pinyin: '（zhǔ）'
 }, {
-  id: 16,
+  id: 26,
   font: '袄',
   _font: '祆',
   pinyin: '（ǎo）',
   _pinyin: '（xiān）'
 }, {
-  id: 17,
+  id: 27,
   font: '淰',
   _font: '谂',
   pinyin: '（niǎn）',
   _pinyin: '（shěn）'
 }, {
-  id: 18,
+  id: 28,
   font: '喏',
   _font: '啱',
   pinyin: '（nuò）',
   _pinyin: '（yán）'
 }, {
-  id: 19,
+  id: 29,
   font: '薄',
   _font: '簿',
   pinyin: '（báo）',
   _pinyin: '（bó）'
 }, {
-  id: 20,
+  id: 30,
   font: '描',
   _font: '猫',
   pinyin: '（miáo）',
   _pinyin: '（māo）'
 }];
+console.log(diffList.length, 'length');
 
 var Store = function () {
   function Store() {
@@ -293,7 +354,7 @@ var Store = function () {
     value: function setNowLevel(num) {
       if (this.maxLevel >= num) {
         this.nowLevel = num;
-        this.difficulty = Math.ceil(num / 20);
+        this.difficulty = Math.ceil(num / 30);
         _taroWeapp2.default.setStorageSync('__level', num);
       }
     }

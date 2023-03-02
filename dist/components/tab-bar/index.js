@@ -76,7 +76,7 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MMTabBar.__proto__ || Object.getPrototypeOf(MMTabBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray13", "styles", "isNewIphone", "data", "currPageIndex", "flag", "path"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMBadge"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MMTabBar.__proto__ || Object.getPrototypeOf(MMTabBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray15", "styles", "isNewIphone", "data", "currPageIndex", "flag", "path"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMBadge"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(MMTabBar, [{
@@ -110,7 +110,7 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
       var data = (0, _GlobalData.getGlobalData)(_GlobalData.EGlobalDataKey.Tabs);
       var activeColor = (0, _GlobalData.getGlobalData)(_GlobalData.EGlobalDataKey.ActiveColor) || _indexModules2.default.primaryColor;
       var defaultColor = (0, _GlobalData.getGlobalData)(_GlobalData.EGlobalDataKey.DefaultColor) || _indexModules2.default.tabBarFontColor;
-      var loopArray13 = data.map(function (value, index) {
+      var loopArray15 = data.map(function (value, index) {
         value = {
           $original: (0, _taroWeapp.internal_get_original)(value)
         };
@@ -155,7 +155,7 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
         };
       });
       Object.assign(this.__state, {
-        loopArray13: loopArray13,
+        loopArray15: loopArray15,
         styles: _indexModules2.default,
         isNewIphone: _index2.isNewIphone,
         data: data

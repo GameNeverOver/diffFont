@@ -73,7 +73,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "loopArray85", "$compid__145", "styles", "diffsData", "nowLevel", "imgLock", "isNewIphone"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "loopArray11", "$compid__16", "styles", "diffsData", "nowLevel", "imgLock", "isNewIphone"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -94,10 +94,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__145"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__16"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__145 = _genCompid2[0],
-          $compid__145 = _genCompid2[1];
+          $prevCompid__16 = _genCompid2[0],
+          $compid__16 = _genCompid2[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           diffsData = _useContext.diffsData,
@@ -105,13 +105,13 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           nowLevel = _useContext.nowLevel;
 
       var anonymousState__temp = '\u5171\u8BA1' + diffsData.length + '\u5173';
-      var loopArray85 = diffsData.map(function (item, idx) {
+      var loopArray11 = diffsData.map(function (item, idx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp3 = item.$original.id + idx;
 
-        var _$indexKey = "gbzzz" + idx;
+        var _$indexKey = "jzzzz" + idx;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           setNowLevel(idx + 1);
@@ -127,11 +127,11 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": anonymousState__temp
-      }, $compid__145, $prevCompid__145);
+      }, $compid__16, $prevCompid__16);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray85: loopArray85,
-        $compid__145: $compid__145,
+        loopArray11: loopArray11,
+        $compid__16: $compid__16,
         styles: styles,
         diffsData: diffsData,
         nowLevel: nowLevel,

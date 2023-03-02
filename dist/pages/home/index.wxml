@@ -19,7 +19,7 @@
             </view><text>当前关卡：第{{nowLevel}}关</text>
         </view>
         <block wx:if="{{modeVisible}}">
-            <setting compid="{{$compid__147}}"></setting>
+            <setting compid="{{$compid__10}}"></setting>
         </block>
     </view>
 </block>

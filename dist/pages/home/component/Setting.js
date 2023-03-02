@@ -65,7 +65,7 @@ var Setting = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Setting.__proto__ || Object.getPrototypeOf(Setting)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray23", "styles", "list", "effectMode", "setEffectMode", "setModeVisible"], _this.anonymousFunc2Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Setting.__proto__ || Object.getPrototypeOf(Setting)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray12", "styles", "list", "effectMode", "setEffectMode", "setModeVisible"], _this.anonymousFunc2Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Setting, [{
@@ -109,12 +109,12 @@ var Setting = (_temp2 = _class = function (_Taro$Component) {
         return e.stopPropagation();
       };
 
-      var loopArray23 = list.map(function (item, __index2) {
+      var loopArray12 = list.map(function (item, __index2) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey = "cdzzz" + __index2;
+        var _$indexKey = "bazzz" + __index2;
 
         _this2.anonymousFunc2Map[_$indexKey] = changeMode;
         return {
@@ -123,7 +123,7 @@ var Setting = (_temp2 = _class = function (_Taro$Component) {
         };
       });
       Object.assign(this.__state, {
-        loopArray23: loopArray23,
+        loopArray12: loopArray12,
         styles: styles,
         list: list,
         effectMode: effectMode
