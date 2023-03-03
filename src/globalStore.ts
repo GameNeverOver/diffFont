@@ -206,7 +206,7 @@ class Store {
   // 当前关卡
   nowLevel = 1
   // 当前关卡
-  maxLevel = 140
+  maxLevel = 210
   // 音效相关
   effectMode = {
     bgm: false,

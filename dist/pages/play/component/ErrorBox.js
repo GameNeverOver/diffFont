@@ -56,7 +56,7 @@ var FiveBox = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FiveBox.__proto__ || Object.getPrototypeOf(FiveBox)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray13", "styles", "list", "ImgError"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FiveBox.__proto__ || Object.getPrototypeOf(FiveBox)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray14", "styles", "list", "ImgError"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(FiveBox, [{
@@ -77,7 +77,7 @@ var FiveBox = (_temp2 = _class = function (_Taro$Component) {
       var _props$list = this.__props.list,
           list = _props$list === undefined ? [] : _props$list;
 
-      var loopArray13 = list.map(function (v, idx) {
+      var loopArray14 = list.map(function (v, idx) {
         v = {
           $original: (0, _taroWeapp.internal_get_original)(v)
         };
@@ -91,7 +91,7 @@ var FiveBox = (_temp2 = _class = function (_Taro$Component) {
         };
       });
       Object.assign(this.__state, {
-        loopArray13: loopArray13,
+        loopArray14: loopArray14,
         styles: styles,
         list: list,
         ImgError: _daocha2.default

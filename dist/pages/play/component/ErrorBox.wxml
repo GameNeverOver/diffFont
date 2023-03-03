@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.errorBox}}">
-        <block wx:if="{{v.$original}}" wx:for="{{loopArray13}}" wx:for-item="v" wx:for-index="idx" wx:key="idx">
+        <block wx:if="{{v.$original}}" wx:for="{{loopArray14}}" wx:for-item="v" wx:for-index="idx" wx:key="idx">
             <image src="{{ImgError}}" style="{{v.$loopState__temp2}}"></image>
         </block>
     </view>

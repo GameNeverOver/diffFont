@@ -6,6 +6,7 @@ import Taro, { FC, useState, useContext, useEffect, useDidShow } from '@tarojs/t
 import * as styles from './index.module.less'
 import Setting from './component/Setting'
 import { observer } from '@tarojs/mobx'
+import { sharePage } from '~/common/func'
 import $Store from '~/globalStore'
 import { gameName } from '~/consts'
 import imgSetting from './imgs/shezhi.png'
@@ -27,6 +28,10 @@ const Index: FC = () => {
       setNowLevel(__level)
     }
   })
+
+  useEffect(() => {
+    sharePage()
+  }, [])
 
   return (
     <View className={styles.indexPage}>
@@ -56,9 +61,7 @@ const Index: FC = () => {
       </View>
 
       <View className={styles.start}>
-        <View onClick={() => Taro.reLaunch({ url: `/pages/play/index` })}>
-          开始游戏 <Image src={imgClick} />
-        </View>
+        <View onClick={() => Taro.reLaunch({ url: `/pages/play/index` })}>开始闯关</View>
         <Text>当前关卡：第{nowLevel}关</Text>
       </View>
 

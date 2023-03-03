@@ -10,6 +10,7 @@ import ErrorBox from './component/ErrorBox'
 import PassPrompt from './component/PassPrompt'
 import SuccessBox from './component/Success'
 import * as styles from './index.module.less'
+import { sharePage } from '~/common/func'
 import { isNewIphone } from '~/modules/@wmeimob/taro-design/src/components/utils'
 import $Store from '~/globalStore'
 import { observer } from '@tarojs/mobx'
@@ -105,6 +106,7 @@ const Index: FC = () => {
   useEffect(() => {
     duration = gameSeconds
     queryLevel(nowLevel)
+    sharePage()
     // effectMode.bgm && myBgm.play()
   }, [])
 
