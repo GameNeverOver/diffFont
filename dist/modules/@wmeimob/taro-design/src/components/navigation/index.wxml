@@ -22,7 +22,7 @@
     <block>
         <block wx:if="{{length > 1}}">
             <view class="{{styles.goback}}" bindtap="onGoBack">
-                <mm-icon-font compid="{{$compid__17}}"></mm-icon-font>
+                <mm-icon-font compid="{{$compid__19}}"></mm-icon-font>
             </view>
         </block>
     </block>

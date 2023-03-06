@@ -115,7 +115,7 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
           $original: (0, _taroWeapp.internal_get_original)(value)
         };
 
-        var _$indexKey = "bdzzz" + index;
+        var _$indexKey = "bbzzz" + index;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           return _this2.onClick(value.$original, index);
@@ -126,31 +126,31 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
           color: _globalStore2.default.tabKey === index ? activeColor : defaultColor
         });
 
-        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bezzzzzzzz" + index, true),
+        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bczzzzzzzz" + index, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__18 = _genCompid2[0],
-            $compid__18 = _genCompid2[1];
+            $prevCompid__17 = _genCompid2[0],
+            $compid__17 = _genCompid2[1];
 
         value.$original.redHot && _taroWeapp.propsManager.set({
           "absolute": true
-        }, $compid__18, $prevCompid__18);
+        }, $compid__17, $prevCompid__17);
 
-        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "bfzzzzzzzz" + index, true),
+        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "bdzzzzzzzz" + index, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__19 = _genCompid4[0],
-            $compid__19 = _genCompid4[1];
+            $prevCompid__18 = _genCompid4[0],
+            $compid__18 = _genCompid4[1];
 
         value.$original.count && _taroWeapp.propsManager.set({
           "value": value.$original.count,
           "digit": 2,
           "absolute": true
-        }, $compid__19, $prevCompid__19);
+        }, $compid__18, $prevCompid__18);
         return {
           _$indexKey: _$indexKey,
           $loopState__temp2: $loopState__temp2,
           $loopState__temp4: $loopState__temp4,
+          $compid__17: $compid__17,
           $compid__18: $compid__18,
-          $compid__19: $compid__19,
           $original: value.$original
         };
       });

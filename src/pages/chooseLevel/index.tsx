@@ -24,8 +24,10 @@ const Index: FC = () => {
             <View
               key={item.id + idx}
               onClick={() => {
-                setNowLevel(idx + 1)
-                Taro.reLaunch({ url: `/pages/play/index` })
+                if (nowLevel >= idx + 1) {
+                  setNowLevel(idx + 1)
+                  Taro.reLaunch({ url: `/pages/play/index` })
+                }
               }}
             >
               {nowLevel >= idx + 1 ? (

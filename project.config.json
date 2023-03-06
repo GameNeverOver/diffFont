@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "%E7%88%B1%E4%BF%A1%E7%B2%BE%E6%9C%BA-%E9%87%8D%E6%9E%84-%E7%94%A8%E6%88%B7%E7%AB%AF",
+  "projectname": "文字找不同",
   "description": "",
   "appid": "wxab64d0db8333845a",
   "setting": {

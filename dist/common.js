@@ -782,9 +782,11 @@ var Store = function () {
     key: 'setNowLevel',
     value: function setNowLevel(num) {
       if (this.maxLevel >= num) {
+        if (num >= this.nowLevel) {
+          _taroWeapp2.default.setStorageSync('__level', num);
+        }
         this.nowLevel = num;
         this.difficulty = Math.ceil(num / 30);
-        _taroWeapp2.default.setStorageSync('__level', num);
       }
     }
   }, {

@@ -81,7 +81,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["$compid__23", "styles", "gameName", "imgGlasses", "imgSetting", "imgChoose", "modeVisible", "nowLevel"], _this.customComponents = ["Setting"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["$compid__10", "styles", "gameName", "imgGlasses", "imgSetting", "imgChoose", "modeVisible", "nowLevel"], _this.customComponents = ["Setting"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -100,10 +100,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__23"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__10"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__23 = _genCompid2[0],
-          $compid__23 = _genCompid2[1];
+          $prevCompid__10 = _genCompid2[0],
+          $compid__10 = _genCompid2[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           nowLevel = _useContext.nowLevel,
@@ -144,9 +144,9 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         "effectMode": effectMode,
         "setEffectMode": setEffectMode,
         "setModeVisible": setModeVisible
-      }, $compid__23, $prevCompid__23);
+      }, $compid__10, $prevCompid__10);
       Object.assign(this.__state, {
-        $compid__23: $compid__23,
+        $compid__10: $compid__10,
         styles: styles,
         gameName: _index.gameName,
         imgGlasses: _yanjing2.default,

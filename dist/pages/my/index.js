@@ -72,7 +72,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["$compid__10", "styles"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["$compid__15", "styles"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -91,10 +91,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__10"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__10 = _genCompid2[0],
-          $compid__10 = _genCompid2[1];
+          $prevCompid__15 = _genCompid2[0],
+          $compid__15 = _genCompid2[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           setUserInfo = _useContext.setUserInfo,
@@ -116,9 +116,9 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": ""
-      }, $compid__10, $prevCompid__10);
+      }, $compid__15, $prevCompid__15);
       Object.assign(this.__state, {
-        $compid__10: $compid__10,
+        $compid__15: $compid__15,
         styles: styles
       });
       return this.__state;

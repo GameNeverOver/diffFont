@@ -94,7 +94,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '火眼精金',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp6", "loopArray22", "loopArray23", "$compid__28", "$compid__29", "$compid__30", "$compid__31", "styles", "imgShouye", "ing", "imgEnd", "imgStart", "difficulty", "fontInfo", "pass", "imgStar", "$anonymousCallee__3", "passVisible", "isSuccess", "pause", "isNewIphone", "nowLevel", "fomatTime", "diffsData"], _this.anonymousFunc2Map = {}, _this.customComponents = ["MMNavigation", "FiveBox", "PassPrompt", "SuccessBox", "ErrorBox"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp6", "loopArray9", "loopArray10", "$compid__11", "$compid__12", "$compid__13", "$compid__14", "styles", "imgShouye", "ing", "imgEnd", "imgStart", "difficulty", "fontInfo", "pass", "imgStar", "$anonymousCallee__1", "passVisible", "isSuccess", "pause", "isNewIphone", "nowLevel", "fomatTime", "diffsData"], _this.anonymousFunc2Map = {}, _this.customComponents = ["MMNavigation", "FiveBox", "PassPrompt", "SuccessBox", "ErrorBox"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -115,25 +115,25 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__28"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__28 = _genCompid2[0],
-          $compid__28 = _genCompid2[1];
+          $prevCompid__11 = _genCompid2[0],
+          $compid__11 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__29"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__29 = _genCompid4[0],
-          $compid__29 = _genCompid4[1];
+          $prevCompid__12 = _genCompid4[0],
+          $compid__12 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__30"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__30 = _genCompid6[0],
-          $compid__30 = _genCompid6[1];
+          $prevCompid__13 = _genCompid6[0],
+          $compid__13 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__31"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__31 = _genCompid8[0],
-          $compid__31 = _genCompid8[1];
+          $prevCompid__14 = _genCompid8[0],
+          $compid__14 = _genCompid8[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           maxLevel = _useContext.maxLevel,
@@ -308,13 +308,13 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         setPause(false);
       };
 
-      var $anonymousCallee__3 = Array(difficulty).fill(100);
-      var loopArray22 = fontInfo.map(function (item, __index2) {
+      var $anonymousCallee__1 = Array(difficulty).fill(100);
+      var loopArray9 = fontInfo.map(function (item, __index2) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey = "bhzzz" + __index2;
+        var _$indexKey = "izzzz" + __index2;
 
         _this2.anonymousFunc2Map[_$indexKey] = function (e) {
           if (item.$original.flag) {
@@ -329,7 +329,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           $original: item.$original
         };
       });
-      var loopArray23 = Array(difficulty).fill(100).map(function (item, idx) {
+      var loopArray10 = Array(difficulty).fill(100).map(function (item, idx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
@@ -342,28 +342,28 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": ""
-      }, $compid__28, $prevCompid__28);
+      }, $compid__11, $prevCompid__11);
       _taroWeapp.propsManager.set({
         "list": fiveList
-      }, $compid__29, $prevCompid__29);
+      }, $compid__12, $prevCompid__12);
       passVisible && _taroWeapp.propsManager.set({
         "fail": anonymousState__temp6,
         "tryAgain": tryAgain
-      }, $compid__30, $prevCompid__30);
+      }, $compid__13, $prevCompid__13);
       _taroWeapp.propsManager.set({
         "list": errorList
-      }, $compid__31, $prevCompid__31);
+      }, $compid__14, $prevCompid__14);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
         anonymousState__temp3: anonymousState__temp3,
         anonymousState__temp6: anonymousState__temp6,
-        loopArray22: loopArray22,
-        loopArray23: loopArray23,
-        $compid__28: $compid__28,
-        $compid__29: $compid__29,
-        $compid__30: $compid__30,
-        $compid__31: $compid__31,
+        loopArray9: loopArray9,
+        loopArray10: loopArray10,
+        $compid__11: $compid__11,
+        $compid__12: $compid__12,
+        $compid__13: $compid__13,
+        $compid__14: $compid__14,
         styles: styles,
         imgShouye: _home2.default,
         ing: ing,
@@ -373,7 +373,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         fontInfo: fontInfo,
         pass: pass,
         imgStar: _start2.default,
-        $anonymousCallee__3: $anonymousCallee__3,
+        $anonymousCallee__1: $anonymousCallee__1,
         passVisible: passVisible,
         isSuccess: isSuccess,
         pause: pause,

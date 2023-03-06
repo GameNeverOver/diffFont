@@ -1,9 +1,9 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.choosePage}}">
         <view class="{{styles.levelContainer}}">
-            <mm-navigation compid="{{$compid__12}}"></mm-navigation>
+            <mm-navigation compid="{{$compid__21}}"></mm-navigation>
             <view class="{{styles.levelList}}">
-                <view wx:key="$loopState__temp3" bindtap="anonymousFunc0" wx:for="{{loopArray9}}" wx:for-item="item" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+                <view wx:key="$loopState__temp3" bindtap="anonymousFunc0" wx:for="{{loopArray17}}" wx:for-item="item" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
                     <block>
                         <block wx:if="{{nowLevel >= idx + 1}}"><text class="{{styles.findFont}}">{{item.$original.font}}</text>
                         </block>

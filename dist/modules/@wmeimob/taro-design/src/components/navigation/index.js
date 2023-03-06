@@ -102,9 +102,9 @@ var MMNavigation = (_temp2 = _class = function (_PureComponent) {
       // const viewHeight = this.props.type === MMNavigationType.transparent ? 0 : this.state.height + statusBarHeight + 'px';
 
       var viewHeight = this.__state.height + statusBarHeight + 'px';
-      var anonymousState__temp = backVisible ? this._createGoBackData(__prefix + "bbzzzzzzzz")() : null;
+      var anonymousState__temp = backVisible ? this._createGoBackData(__prefix + "bezzzzzzzz")() : null;
 
-      var anonymousState__temp2 = this._createImageData(__prefix + "bczzzzzzzz")(logo);
+      var anonymousState__temp2 = this._createImageData(__prefix + "bfzzzzzzzz")(logo);
 
       var anonymousState__temp3 = (0, _taroWeapp.internal_inline_style)({ height: viewHeight });
       var anonymousState__temp4 = (0, _taroWeapp.internal_inline_style)({ paddingTop: statusBarHeight + 'px' });
@@ -138,10 +138,10 @@ var MMNavigation = (_temp2 = _class = function (_PureComponent) {
       var _this2 = this;
 
       return function () {
-        var _genCompid = (0, _taroWeapp.genCompid)(_$uid + "$compid__17"),
+        var _genCompid = (0, _taroWeapp.genCompid)(_$uid + "$compid__19"),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__17 = _genCompid2[0],
-            $compid__17 = _genCompid2[1];
+            $prevCompid__19 = _genCompid2[0],
+            $compid__19 = _genCompid2[1];
 
         var _getCurrentPages = (0, _taroWeapp.getCurrentPages)(),
             length = _getCurrentPages.length;
@@ -151,9 +151,9 @@ var MMNavigation = (_temp2 = _class = function (_PureComponent) {
         length > 1 && _taroWeapp.propsManager.set({
           "color": type === (_const3.MMNavigationType.Default || _const3.MMNavigationType.OrderDetail) ? undefined : 'black',
           "value": _const2.default.Back
-        }, $compid__17, $prevCompid__17);
+        }, $compid__19, $prevCompid__19);
         return {
-          $compid__17: $compid__17,
+          $compid__19: $compid__19,
           length: length,
           styles: _indexModules2.default
         };

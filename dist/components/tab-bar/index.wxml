@@ -10,11 +10,11 @@
                     <view class="{{styles.iconfont}}">
                         <view class="{{value.$loopState__temp2}}"></view>
                         <block wx:if="{{value.$original.redHot}}">
-                            <mm-badge compid="{{value.$compid__18}}"></mm-badge>
+                            <mm-badge compid="{{value.$compid__17}}"></mm-badge>
                         </block>
                         <block wx:if="{{value.$original.count}}">
                             <view class="{{styles.count}}">
-                                <mm-badge compid="{{value.$compid__19}}"></mm-badge>
+                                <mm-badge compid="{{value.$compid__18}}"></mm-badge>
                             </view>
                         </block>
                     </view>

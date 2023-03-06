@@ -227,12 +227,15 @@ class Store {
 
   setNowLevel(num: number) {
     if (this.maxLevel >= num) {
+      if (num >= this.nowLevel) {
+        Taro.setStorageSync(
+          '__level',
+          num
+        )
+      }
       this.nowLevel = num
       this.difficulty = Math.ceil(num / 30)
-      Taro.setStorageSync(
-        '__level',
-        num
-      )
+
     }
   }
 
